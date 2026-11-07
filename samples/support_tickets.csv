@@ -1,0 +1,1401 @@
+ticket_id,created,category,priority,agent,channel,resolution_hours,sla_hours,csat
+T-50000,2026-07-22,Billing,P2,Priya,email,8.4,24,5
+T-50001,2026-09-13,Feature request,P2,Omar,phone,20.8,24,3
+T-50002,2026-07-17,Login / SSO,P1,Tom,phone,17.9,4,2
+T-50003,2026-08-20,Data import,P2,Priya,phone,2.9,24,5
+T-50004,2026-08-22,Login / SSO,P2,Yuki,email,13.7,24,4
+T-50005,2026-06-20,Billing,P2,Omar,chat,8.5,24,5
+T-50006,2026-07-21,Login / SSO,P2,Tom,email,0.6,24,5
+T-50007,2026-09-07,Data import,P3,Dana,phone,5.9,72,5
+T-50008,2026-06-02,Feature request,P3,Priya,phone,145.6,72,3
+T-50009,2026-06-05,Feature request,P1,Dana,chat,4.3,4,4
+T-50010,2026-08-28,Feature request,P2,Yuki,chat,30.7,24,4
+T-50011,2026-07-02,API errors,P2,Yuki,email,29.6,24,4
+T-50012,2026-06-27,Billing,P1,Omar,phone,50.4,4,3
+T-50013,2026-10-16,Feature request,P2,Omar,chat,273.8,24,3
+T-50014,2026-06-13,Feature request,P1,Dana,chat,176.4,4,2
+T-50015,2026-07-06,Login / SSO,P2,Dana,email,5.3,24,3
+T-50016,2026-09-14,Feature request,P3,Omar,phone,60.8,72,3
+T-50017,2026-10-02,Data import,P2,Priya,phone,5.6,24,4
+T-50018,2026-08-02,Billing,P3,Omar,chat,10.8,72,4
+T-50019,2026-07-26,Billing,P1,Tom,email,11.4,4,2
+T-50020,2026-10-14,Login / SSO,P3,Priya,email,4.3,72,4
+T-50021,2026-07-04,Feature request,P2,Priya,chat,14.8,24,5
+T-50022,2026-09-11,Feature request,P3,Priya,phone,12.5,72,4
+T-50023,2026-06-28,API errors,P2,Luis,chat,,24,
+T-50024,2026-10-14,Billing,P1,Priya,phone,6.0,4,2
+T-50025,2026-07-09,Billing,P2,Tom,email,9.1,24,5
+T-50026,2026-09-17,Billing,P2,Luis,phone,2.2,24,5
+T-50027,2026-10-11,Login / SSO,P3,Omar,email,,72,
+T-50028,2026-06-14,Feature request,P2,Yuki,email,135.3,24,3
+T-50029,2026-09-12,Feature request,P3,Dana,phone,29.8,72,4
+T-50030,2026-07-23,Login / SSO,P2,Priya,email,2.6,24,5
+T-50031,2026-10-01,Data import,P3,Omar,chat,29.6,72,4
+T-50032,2026-08-25,API errors,P2,Luis,email,36.8,24,3
+T-50033,2026-06-20,Billing,P2,Dana,chat,1.9,24,4
+T-50034,2026-08-03,API errors,P2,Dana,email,10.2,24,3
+T-50035,2026-07-08,Data import,P2,Dana,phone,32.8,24,3
+T-50036,2026-08-29,Login / SSO,P2,Priya,chat,27.5,24,4
+T-50037,2026-10-11,Login / SSO,P2,Yuki,chat,8.9,24,5
+T-50038,2026-06-06,API errors,P3,Tom,chat,4.6,72,4
+T-50039,2026-09-19,Billing,P3,Omar,chat,4.5,72,4
+T-50040,2026-10-18,API errors,P3,Tom,phone,66.1,72,4
+T-50041,2026-10-29,Login / SSO,P2,Priya,email,3.2,24,4
+T-50042,2026-07-02,API errors,P3,Tom,email,16.4,72,5
+T-50043,2026-10-06,Outage,P1,Luis,email,7.9,4,3
+T-50044,2026-10-21,Data import,P2,Priya,chat,24.0,24,4
+T-50045,2026-07-02,Billing,P2,Priya,chat,,24,
+T-50046,2026-08-04,API errors,P1,Priya,phone,2.4,4,4
+T-50047,2026-07-10,API errors,P3,Omar,phone,49.2,72,5
+T-50048,2026-06-09,Feature request,P2,Priya,phone,38.5,24,3
+T-50049,2026-06-26,API errors,P2,Priya,chat,35.8,24,4
+T-50050,2026-07-22,Feature request,P2,Tom,chat,31.1,24,4
+T-50051,2026-09-27,Login / SSO,P2,Tom,phone,8.5,24,4
+T-50052,2026-08-31,Data import,P2,Tom,chat,25.0,24,4
+T-50053,2026-06-07,Data import,P3,Tom,email,125.1,72,4
+T-50054,2026-10-18,API errors,P2,Priya,chat,36.8,24,5
+T-50055,2026-09-27,Billing,P3,Yuki,phone,16.5,72,5
+T-50056,2026-08-14,Billing,P3,Omar,email,8.3,72,5
+T-50057,2026-10-09,Billing,P3,Dana,chat,13.4,72,4
+T-50058,2026-07-10,Billing,P3,Priya,email,3.6,72,4
+T-50059,2026-07-22,Feature request,P3,Dana,email,7.3,72,5
+T-50060,2026-10-08,Billing,P2,Dana,chat,5.9,24,4
+T-50061,2026-07-31,Data import,P3,Yuki,phone,40.6,72,4
+T-50062,2026-06-06,API errors,P2,Omar,email,3.3,24,4
+T-50063,2026-07-22,Data import,P3,Priya,chat,14.2,72,5
+T-50064,2026-06-28,API errors,P2,Tom,chat,18.0,24,5
+T-50065,2026-06-03,Data import,P3,Dana,email,19.1,72,5
+T-50066,2026-07-06,Feature request,P2,Omar,email,37.9,24,3
+T-50067,2026-08-31,Outage,P1,Yuki,phone,2.1,4,5
+T-50068,2026-08-30,Billing,P3,Yuki,phone,10.7,72,4
+T-50069,2026-08-17,Feature request,P2,Dana,chat,154.2,24,2
+T-50070,2026-10-08,API errors,P2,Yuki,phone,23.9,24,3
+T-50071,2026-08-29,Login / SSO,P3,Tom,email,9.5,72,5
+T-50072,2026-09-30,Billing,P2,Luis,phone,3.9,24,5
+T-50073,2026-07-15,Feature request,P2,Tom,phone,140.7,24,2
+T-50074,2026-06-19,Login / SSO,P1,Priya,email,3.5,4,4
+T-50075,2026-09-24,Feature request,P2,Omar,chat,28.5,24,4
+T-50076,2026-07-12,API errors,P2,Yuki,email,9.1,24,5
+T-50077,2026-06-25,Billing,P1,Luis,phone,2.3,4,4
+T-50078,2026-10-14,Feature request,P2,Luis,chat,41.1,24,4
+T-50079,2026-10-22,Data import,P2,Dana,phone,42.2,24,3
+T-50080,2026-08-16,Billing,P3,Tom,phone,1.9,72,4
+T-50081,2026-08-14,Data import,P1,Priya,email,56.2,4,2
+T-50082,2026-10-26,Feature request,P1,Yuki,phone,16.6,4,3
+T-50083,2026-10-18,Login / SSO,P3,Dana,phone,7.2,72,5
+T-50084,2026-08-06,Billing,P2,Dana,phone,2.2,24,4
+T-50085,2026-06-16,Feature request,P2,Dana,email,16.1,24,3
+T-50086,2026-09-15,Login / SSO,P1,Yuki,phone,5.5,4,3
+T-50087,2026-06-11,Data import,P2,Tom,chat,4.4,24,4
+T-50088,2026-07-29,Feature request,P3,Dana,email,,72,
+T-50089,2026-06-05,Data import,P3,Dana,chat,17.7,72,4
+T-50090,2026-09-18,API errors,P2,Dana,chat,12.8,24,5
+T-50091,2026-06-15,Login / SSO,P2,Dana,email,1.6,24,4
+T-50092,2026-10-16,Data import,P3,Dana,email,18.5,72,4
+T-50093,2026-06-12,Billing,P2,Yuki,email,3.8,24,5
+T-50094,2026-07-04,Outage,P1,Tom,phone,5.0,4,4
+T-50095,2026-08-31,Billing,P3,Luis,chat,22.8,72,4
+T-50096,2026-08-14,Feature request,P3,Luis,phone,121.9,72,3
+T-50097,2026-09-14,Billing,P2,Yuki,email,12.2,24,5
+T-50098,2026-10-12,Billing,P2,Omar,email,2.6,24,5
+T-50099,2026-09-21,Billing,P2,Tom,email,18.9,24,5
+T-50100,2026-08-11,Data import,P1,Priya,phone,19.5,4,3
+T-50101,2026-09-06,Data import,P1,Dana,chat,10.7,4,3
+T-50102,2026-06-14,Billing,P2,Dana,phone,10.8,24,4
+T-50103,2026-08-07,Feature request,P2,Yuki,email,99.7,24,3
+T-50104,2026-09-20,Login / SSO,P3,Omar,phone,12.0,72,4
+T-50105,2026-08-13,Data import,P3,Yuki,phone,43.0,72,3
+T-50106,2026-08-06,Feature request,P3,Tom,email,19.2,72,5
+T-50107,2026-08-10,Login / SSO,P3,Luis,chat,0.5,72,5
+T-50108,2026-08-10,Login / SSO,P2,Omar,email,2.7,24,4
+T-50109,2026-08-22,Billing,P3,Luis,email,18.1,72,4
+T-50110,2026-08-31,Data import,P2,Yuki,chat,14.4,24,5
+T-50111,2026-06-17,Feature request,P3,Priya,chat,34.8,72,5
+T-50112,2026-07-29,Login / SSO,P2,Luis,phone,6.0,24,4
+T-50113,2026-09-21,Billing,P3,Dana,email,8.7,72,4
+T-50114,2026-08-06,Billing,P3,Dana,phone,37.0,72,5
+T-50115,2026-06-28,Billing,P2,Tom,email,1.5,24,4
+T-50116,2026-09-04,Login / SSO,P2,Omar,email,10.6,24,4
+T-50117,2026-09-01,Billing,P3,Tom,chat,7.3,72,4
+T-50118,2026-06-08,Data import,P3,Dana,email,3.8,72,5
+T-50119,2026-10-09,API errors,P3,Omar,phone,20.1,72,5
+T-50120,2026-09-05,API errors,P3,Dana,phone,28.4,72,5
+T-50121,2026-07-28,Billing,P1,Yuki,phone,8.3,4,4
+T-50122,2026-10-14,Data import,P3,Yuki,chat,35.2,72,4
+T-50123,2026-08-02,Billing,P3,Priya,chat,4.0,72,4
+T-50124,2026-08-01,Feature request,P2,Tom,chat,63.6,24,2
+T-50125,2026-09-23,API errors,P3,Luis,email,24.7,72,5
+T-50126,2026-09-13,Feature request,P2,Omar,chat,67.3,24,3
+T-50127,2026-10-08,Billing,P2,Yuki,email,40.9,24,4
+T-50128,2026-06-04,Feature request,P3,Tom,phone,19.7,72,3
+T-50129,2026-09-19,Billing,P3,Luis,email,0.3,72,4
+T-50130,2026-09-08,Data import,P3,Priya,chat,51.6,72,4
+T-50131,2026-08-26,Billing,P3,Yuki,phone,9.0,72,4
+T-50132,2026-08-30,Billing,P3,Tom,chat,53.9,72,4
+T-50133,2026-10-29,API errors,P3,Yuki,email,39.7,72,4
+T-50134,2026-09-25,API errors,P2,Tom,email,13.7,24,4
+T-50135,2026-06-13,Login / SSO,P2,Yuki,chat,5.0,24,4
+T-50136,2026-07-16,Login / SSO,P2,Dana,email,18.4,24,4
+T-50137,2026-08-20,Data import,P2,Priya,chat,2.3,24,3
+T-50138,2026-07-14,Login / SSO,P2,Priya,phone,2.0,24,5
+T-50139,2026-10-20,Login / SSO,P2,Luis,email,,24,
+T-50140,2026-07-20,Feature request,P3,Dana,chat,0.4,72,3
+T-50141,2026-09-22,Feature request,P3,Tom,email,79.5,72,5
+T-50142,2026-08-07,Data import,P2,Luis,phone,2.0,24,5
+T-50143,2026-06-21,API errors,P3,Luis,chat,21.8,72,4
+T-50144,2026-06-19,Data import,P3,Priya,email,27.0,72,5
+T-50145,2026-10-12,Data import,P3,Yuki,phone,8.4,72,5
+T-50146,2026-10-29,API errors,P2,Luis,chat,7.6,24,4
+T-50147,2026-07-18,Data import,P2,Priya,phone,29.1,24,4
+T-50148,2026-06-01,Feature request,P3,Tom,email,61.5,72,4
+T-50149,2026-08-07,API errors,P1,Omar,phone,15.2,4,2
+T-50150,2026-07-30,Feature request,P3,Omar,phone,124.8,72,3
+T-50151,2026-10-02,Data import,P2,Luis,chat,7.7,24,5
+T-50152,2026-08-03,Data import,P2,Dana,chat,23.9,24,3
+T-50153,2026-09-10,API errors,P2,Tom,phone,35.1,24,4
+T-50154,2026-10-08,Login / SSO,P2,Tom,chat,2.6,24,4
+T-50155,2026-09-09,Login / SSO,P2,Tom,phone,17.9,24,4
+T-50156,2026-06-12,Login / SSO,P3,Tom,email,4.0,72,4
+T-50157,2026-06-29,Data import,P3,Yuki,phone,65.0,72,4
+T-50158,2026-08-25,Billing,P2,Yuki,email,24.3,24,4
+T-50159,2026-07-21,Data import,P2,Yuki,email,92.7,24,2
+T-50160,2026-07-26,Feature request,P2,Luis,email,48.3,24,3
+T-50161,2026-10-13,Feature request,P3,Tom,email,11.7,72,5
+T-50162,2026-08-03,Login / SSO,P3,Omar,chat,0.3,72,5
+T-50163,2026-08-09,API errors,P2,Dana,chat,31.7,24,3
+T-50164,2026-10-17,Billing,P3,Luis,phone,9.3,72,4
+T-50165,2026-08-19,Feature request,P2,Tom,email,165.9,24,3
+T-50166,2026-10-26,Billing,P3,Priya,email,6.4,72,5
+T-50167,2026-10-02,Feature request,P3,Omar,chat,20.1,72,4
+T-50168,2026-10-18,Feature request,P3,Tom,email,135.4,72,3
+T-50169,2026-09-03,Data import,P2,Dana,email,14.3,24,4
+T-50170,2026-10-04,Billing,P2,Dana,phone,9.0,24,5
+T-50171,2026-10-24,Feature request,P3,Dana,chat,85.8,72,4
+T-50172,2026-10-23,Feature request,P1,Dana,email,54.8,4,3
+T-50173,2026-10-18,Feature request,P3,Omar,phone,41.6,72,4
+T-50174,2026-06-21,Feature request,P3,Tom,chat,274.5,72,3
+T-50175,2026-10-12,Billing,P1,Luis,chat,13.8,4,3
+T-50176,2026-10-13,Data import,P3,Omar,chat,14.7,72,4
+T-50177,2026-09-20,Data import,P2,Omar,phone,120.1,24,2
+T-50178,2026-07-13,Feature request,P3,Yuki,phone,9.2,72,4
+T-50179,2026-08-04,Feature request,P2,Luis,email,38.3,24,4
+T-50180,2026-09-30,Billing,P3,Tom,chat,0.5,72,4
+T-50181,2026-08-19,Billing,P3,Luis,email,12.1,72,4
+T-50182,2026-06-18,API errors,P3,Yuki,chat,6.9,72,4
+T-50183,2026-08-10,API errors,P3,Tom,chat,9.6,72,4
+T-50184,2026-07-22,Feature request,P3,Luis,email,4.8,72,5
+T-50185,2026-06-27,Login / SSO,P2,Yuki,phone,0.8,24,5
+T-50186,2026-09-30,API errors,P3,Dana,email,3.8,72,4
+T-50187,2026-07-08,Billing,P3,Tom,email,2.8,72,4
+T-50188,2026-09-17,Billing,P3,Priya,email,10.9,72,5
+T-50189,2026-09-07,Login / SSO,P2,Priya,phone,7.4,24,4
+T-50190,2026-08-11,Feature request,P3,Tom,chat,134.2,72,3
+T-50191,2026-07-01,API errors,P2,Tom,chat,23.5,24,4
+T-50192,2026-09-17,Feature request,P2,Yuki,email,14.4,24,5
+T-50193,2026-06-03,Data import,P2,Priya,email,4.8,24,5
+T-50194,2026-10-07,Feature request,P3,Yuki,phone,152.7,72,3
+T-50195,2026-06-12,Login / SSO,P2,Omar,email,32.7,24,3
+T-50196,2026-09-25,Feature request,P3,Tom,phone,72.8,72,3
+T-50197,2026-06-10,Feature request,P3,Yuki,email,27.7,72,5
+T-50198,2026-07-01,Billing,P3,Omar,chat,0.6,72,5
+T-50199,2026-07-20,Billing,P3,Omar,phone,,72,
+T-50200,2026-07-14,Feature request,P2,Yuki,phone,141.7,24,2
+T-50201,2026-06-16,Data import,P3,Yuki,chat,1.5,72,5
+T-50202,2026-08-10,Billing,P2,Omar,email,9.4,24,5
+T-50203,2026-07-01,Login / SSO,P3,Yuki,email,2.5,72,5
+T-50204,2026-06-30,API errors,P2,Luis,email,40.0,24,4
+T-50205,2026-07-26,Feature request,P3,Tom,phone,109.7,72,4
+T-50206,2026-07-19,Feature request,P2,Omar,email,82.6,24,3
+T-50207,2026-09-14,Login / SSO,P3,Luis,email,1.5,72,5
+T-50208,2026-09-21,Billing,P2,Tom,phone,5.5,24,4
+T-50209,2026-07-14,Data import,P3,Yuki,phone,0.8,72,5
+T-50210,2026-09-20,API errors,P3,Omar,phone,6.8,72,5
+T-50211,2026-08-08,API errors,P3,Luis,chat,1.5,72,5
+T-50212,2026-10-11,Login / SSO,P3,Luis,phone,6.4,72,4
+T-50213,2026-06-09,Data import,P3,Dana,email,8.6,72,5
+T-50214,2026-08-26,Billing,P2,Dana,phone,10.4,24,4
+T-50215,2026-09-25,Billing,P1,Omar,chat,9.0,4,3
+T-50216,2026-09-04,Data import,P2,Tom,email,36.4,24,3
+T-50217,2026-10-08,Feature request,P3,Tom,phone,12.3,72,5
+T-50218,2026-10-10,Data import,P1,Priya,email,4.0,4,5
+T-50219,2026-07-06,Feature request,P3,Priya,email,8.3,72,4
+T-50220,2026-08-19,Outage,P1,Luis,email,4.7,4,3
+T-50221,2026-07-15,API errors,P2,Dana,email,5.7,24,5
+T-50222,2026-07-10,Data import,P3,Priya,email,,72,
+T-50223,2026-09-09,Login / SSO,P2,Tom,email,13.0,24,5
+T-50224,2026-07-05,Data import,P2,Priya,phone,11.2,24,3
+T-50225,2026-09-09,Feature request,P2,Priya,email,45.8,24,3
+T-50226,2026-07-31,Feature request,P2,Priya,email,27.6,24,3
+T-50227,2026-06-20,API errors,P3,Luis,email,16.6,72,5
+T-50228,2026-09-17,Login / SSO,P3,Priya,chat,1.0,72,5
+T-50229,2026-09-16,Billing,P3,Tom,email,3.6,72,5
+T-50230,2026-09-12,Login / SSO,P3,Dana,email,9.8,72,4
+T-50231,2026-09-25,API errors,P2,Omar,chat,0.3,24,4
+T-50232,2026-06-30,Data import,P3,Tom,chat,36.6,72,5
+T-50233,2026-09-02,API errors,P3,Luis,phone,1.9,72,4
+T-50234,2026-08-06,Billing,P1,Yuki,chat,2.2,4,4
+T-50235,2026-06-11,Data import,P2,Tom,chat,5.1,24,5
+T-50236,2026-08-15,Login / SSO,P2,Dana,email,8.7,24,5
+T-50237,2026-09-23,Login / SSO,P2,Omar,email,,24,
+T-50238,2026-09-10,Login / SSO,P1,Dana,chat,1.7,4,5
+T-50239,2026-09-26,Data import,P2,Luis,phone,25.7,24,4
+T-50240,2026-06-11,Feature request,P3,Priya,phone,,72,
+T-50241,2026-06-26,Outage,P1,Omar,chat,1.4,4,5
+T-50242,2026-08-05,Data import,P2,Omar,chat,28.1,24,3
+T-50243,2026-10-25,Feature request,P3,Priya,phone,18.1,72,3
+T-50244,2026-09-30,Feature request,P2,Tom,phone,26.2,24,4
+T-50245,2026-06-12,Feature request,P2,Luis,email,55.7,24,3
+T-50246,2026-08-10,Feature request,P3,Yuki,phone,18.6,72,5
+T-50247,2026-06-05,Login / SSO,P2,Luis,chat,7.4,24,4
+T-50248,2026-08-24,API errors,P3,Tom,email,22.5,72,5
+T-50249,2026-09-22,Login / SSO,P2,Omar,chat,1.0,24,4
+T-50250,2026-10-25,Login / SSO,P1,Omar,chat,20.6,4,2
+T-50251,2026-10-14,Billing,P3,Priya,email,4.6,72,4
+T-50252,2026-08-30,API errors,P2,Tom,email,24.0,24,4
+T-50253,2026-10-04,Feature request,P2,Tom,email,494.0,24,3
+T-50254,2026-06-29,Billing,P2,Luis,phone,8.5,24,5
+T-50255,2026-10-19,Outage,P1,Luis,chat,1.6,4,4
+T-50256,2026-08-21,API errors,P3,Yuki,chat,11.2,72,4
+T-50257,2026-09-24,Data import,P2,Luis,chat,3.8,24,5
+T-50258,2026-06-26,API errors,P3,Omar,chat,7.7,72,5
+T-50259,2026-07-28,Data import,P3,Yuki,chat,3.3,72,5
+T-50260,2026-08-03,Feature request,P2,Omar,email,10.9,24,5
+T-50261,2026-09-08,Feature request,P1,Luis,email,48.2,4,3
+T-50262,2026-07-22,Billing,P3,Priya,email,3.9,72,5
+T-50263,2026-08-02,Billing,P2,Tom,phone,20.7,24,4
+T-50264,2026-08-24,API errors,P3,Luis,phone,32.9,72,3
+T-50265,2026-06-09,Feature request,P1,Tom,email,123.7,4,4
+T-50266,2026-10-16,Feature request,P3,Yuki,phone,7.7,72,4
+T-50267,2026-06-16,API errors,P2,Tom,chat,10.0,24,4
+T-50268,2026-09-21,Feature request,P3,Dana,chat,33.6,72,4
+T-50269,2026-06-29,Feature request,P3,Priya,chat,76.8,72,3
+T-50270,2026-06-19,Billing,P2,Omar,email,6.1,24,5
+T-50271,2026-09-22,Feature request,P2,Tom,email,43.4,24,3
+T-50272,2026-07-27,Billing,P2,Yuki,chat,21.2,24,4
+T-50273,2026-10-24,Login / SSO,P3,Tom,phone,10.9,72,4
+T-50274,2026-09-07,Billing,P3,Luis,email,,72,
+T-50275,2026-06-04,API errors,P2,Omar,phone,4.8,24,4
+T-50276,2026-07-14,Data import,P3,Omar,chat,79.0,72,4
+T-50277,2026-07-14,Data import,P3,Tom,chat,81.0,72,3
+T-50278,2026-08-27,Billing,P3,Luis,email,2.5,72,4
+T-50279,2026-09-26,API errors,P2,Omar,phone,13.5,24,5
+T-50280,2026-10-13,Feature request,P3,Omar,email,137.0,72,3
+T-50281,2026-08-09,Feature request,P3,Yuki,phone,48.3,72,4
+T-50282,2026-06-15,Feature request,P3,Yuki,phone,35.5,72,4
+T-50283,2026-07-29,Feature request,P3,Tom,phone,126.4,72,4
+T-50284,2026-07-19,Login / SSO,P2,Dana,email,7.9,24,5
+T-50285,2026-10-27,Login / SSO,P3,Dana,email,3.9,72,5
+T-50286,2026-07-21,Login / SSO,P3,Tom,email,7.0,72,5
+T-50287,2026-06-03,API errors,P2,Dana,chat,13.9,24,5
+T-50288,2026-09-25,Feature request,P2,Priya,email,291.5,24,2
+T-50289,2026-08-12,Login / SSO,P2,Priya,phone,18.1,24,4
+T-50290,2026-10-22,Login / SSO,P2,Omar,chat,4.2,24,5
+T-50291,2026-10-09,Billing,P3,Luis,chat,6.4,72,4
+T-50292,2026-09-22,API errors,P2,Omar,email,6.7,24,5
+T-50293,2026-08-21,Login / SSO,P3,Tom,chat,15.7,72,5
+T-50294,2026-07-10,Feature request,P2,Luis,phone,23.5,24,4
+T-50295,2026-10-11,API errors,P2,Omar,chat,63.5,24,2
+T-50296,2026-08-07,Feature request,P2,Priya,phone,38.3,24,3
+T-50297,2026-10-23,Login / SSO,P2,Tom,chat,,24,
+T-50298,2026-07-06,Billing,P2,Priya,phone,,24,
+T-50299,2026-08-05,Billing,P3,Priya,chat,,72,
+T-50300,2026-10-22,Feature request,P2,Luis,chat,80.6,24,3
+T-50301,2026-08-02,Feature request,P2,Omar,email,10.5,24,4
+T-50302,2026-10-03,Feature request,P2,Yuki,email,17.2,24,3
+T-50303,2026-08-10,Billing,P3,Tom,phone,13.9,72,5
+T-50304,2026-09-14,Billing,P3,Luis,phone,17.4,72,5
+T-50305,2026-08-02,Billing,P2,Yuki,chat,4.0,24,4
+T-50306,2026-06-18,API errors,P2,Omar,chat,32.7,24,4
+T-50307,2026-09-23,Feature request,P2,Luis,chat,82.5,24,2
+T-50308,2026-08-06,Billing,P3,Omar,email,2.9,72,5
+T-50309,2026-09-10,Billing,P2,Dana,chat,16.4,24,5
+T-50310,2026-06-09,Billing,P2,Priya,chat,32.1,24,4
+T-50311,2026-06-18,Login / SSO,P2,Yuki,email,8.0,24,4
+T-50312,2026-06-23,Feature request,P3,Tom,email,92.1,72,4
+T-50313,2026-09-19,Feature request,P3,Tom,phone,183.9,72,4
+T-50314,2026-10-26,Login / SSO,P2,Yuki,phone,2.5,24,4
+T-50315,2026-06-06,Feature request,P2,Priya,chat,,24,
+T-50316,2026-09-18,Billing,P2,Luis,phone,1.6,24,5
+T-50317,2026-10-26,API errors,P3,Omar,email,41.5,72,3
+T-50318,2026-08-18,Billing,P2,Dana,email,2.0,24,5
+T-50319,2026-08-23,Data import,P3,Luis,email,45.0,72,4
+T-50320,2026-08-09,Login / SSO,P2,Luis,chat,1.6,24,5
+T-50321,2026-06-07,Billing,P3,Omar,email,5.9,72,5
+T-50322,2026-09-11,Data import,P2,Tom,phone,8.8,24,5
+T-50323,2026-07-02,Feature request,P3,Luis,chat,10.7,72,5
+T-50324,2026-08-21,Feature request,P2,Luis,chat,32.2,24,4
+T-50325,2026-06-05,Data import,P3,Tom,email,0.5,72,4
+T-50326,2026-06-17,Login / SSO,P3,Omar,phone,3.4,72,5
+T-50327,2026-06-05,Feature request,P3,Priya,chat,181.3,72,3
+T-50328,2026-07-16,Billing,P3,Luis,email,8.3,72,5
+T-50329,2026-08-15,Billing,P3,Tom,chat,8.4,72,5
+T-50330,2026-07-09,Billing,P3,Omar,email,13.5,72,5
+T-50331,2026-09-12,Billing,P2,Priya,email,9.8,24,4
+T-50332,2026-09-29,Feature request,P2,Luis,phone,2.1,24,5
+T-50333,2026-06-26,Feature request,P2,Luis,email,0.9,24,5
+T-50334,2026-09-15,Billing,P2,Yuki,email,19.4,24,5
+T-50335,2026-08-05,Login / SSO,P2,Omar,phone,0.8,24,4
+T-50336,2026-10-05,API errors,P2,Yuki,email,22.1,24,4
+T-50337,2026-06-25,Login / SSO,P2,Priya,email,7.6,24,5
+T-50338,2026-08-17,Login / SSO,P2,Tom,chat,4.3,24,4
+T-50339,2026-09-17,Feature request,P2,Luis,email,28.2,24,4
+T-50340,2026-06-13,Feature request,P3,Luis,phone,,72,
+T-50341,2026-07-12,Billing,P3,Dana,phone,5.1,72,4
+T-50342,2026-09-12,Feature request,P3,Luis,chat,36.1,72,4
+T-50343,2026-08-11,Data import,P2,Yuki,chat,23.4,24,3
+T-50344,2026-10-19,Login / SSO,P3,Dana,chat,3.7,72,5
+T-50345,2026-09-02,Feature request,P2,Dana,chat,33.4,24,4
+T-50346,2026-08-15,Feature request,P2,Priya,chat,8.1,24,5
+T-50347,2026-10-08,API errors,P3,Yuki,email,3.2,72,5
+T-50348,2026-10-13,Billing,P3,Luis,phone,9.2,72,4
+T-50349,2026-09-01,Data import,P3,Omar,email,17.1,72,4
+T-50350,2026-07-28,API errors,P3,Omar,phone,29.6,72,4
+T-50351,2026-06-13,Data import,P2,Tom,chat,126.5,24,4
+T-50352,2026-08-16,Data import,P2,Priya,phone,0.3,24,4
+T-50353,2026-06-18,Login / SSO,P3,Tom,email,0.7,72,4
+T-50354,2026-09-16,Data import,P2,Luis,chat,10.9,24,4
+T-50355,2026-08-10,Billing,P3,Tom,email,2.7,72,4
+T-50356,2026-08-10,Billing,P2,Dana,phone,14.3,24,3
+T-50357,2026-09-29,Login / SSO,P2,Tom,chat,2.9,24,5
+T-50358,2026-08-27,Billing,P3,Dana,chat,20.8,72,5
+T-50359,2026-10-28,Billing,P2,Omar,email,1.8,24,5
+T-50360,2026-09-01,Data import,P2,Omar,phone,6.1,24,3
+T-50361,2026-06-27,Feature request,P2,Priya,phone,120.2,24,2
+T-50362,2026-08-04,Data import,P2,Dana,phone,,24,
+T-50363,2026-10-05,Feature request,P2,Tom,email,27.0,24,3
+T-50364,2026-10-03,Outage,P1,Yuki,chat,2.5,4,3
+T-50365,2026-06-26,Billing,P2,Dana,email,8.6,24,4
+T-50366,2026-09-16,Data import,P3,Omar,chat,37.2,72,4
+T-50367,2026-09-11,API errors,P3,Omar,chat,26.8,72,5
+T-50368,2026-10-24,API errors,P1,Omar,email,3.2,4,5
+T-50369,2026-08-04,Feature request,P3,Omar,email,26.6,72,5
+T-50370,2026-08-23,Login / SSO,P3,Omar,phone,3.7,72,5
+T-50371,2026-08-29,API errors,P3,Luis,email,24.3,72,4
+T-50372,2026-07-29,Login / SSO,P3,Priya,chat,2.3,72,4
+T-50373,2026-09-06,API errors,P3,Omar,chat,3.6,72,4
+T-50374,2026-07-11,Feature request,P3,Priya,email,,72,
+T-50375,2026-10-22,API errors,P3,Yuki,email,5.6,72,4
+T-50376,2026-09-12,Billing,P3,Luis,phone,19.1,72,5
+T-50377,2026-09-07,Login / SSO,P2,Omar,phone,0.7,24,5
+T-50378,2026-08-22,Outage,P1,Tom,email,40.4,4,2
+T-50379,2026-08-10,API errors,P3,Luis,email,0.4,72,5
+T-50380,2026-07-08,Data import,P3,Luis,phone,0.3,72,5
+T-50381,2026-10-21,Data import,P2,Yuki,chat,17.6,24,4
+T-50382,2026-09-08,API errors,P3,Omar,chat,22.0,72,5
+T-50383,2026-09-03,Feature request,P2,Luis,email,27.2,24,3
+T-50384,2026-08-03,Login / SSO,P3,Yuki,phone,9.5,72,5
+T-50385,2026-06-27,API errors,P3,Yuki,phone,26.3,72,4
+T-50386,2026-08-08,Feature request,P2,Dana,chat,51.2,24,4
+T-50387,2026-07-14,Data import,P2,Tom,phone,0.9,24,5
+T-50388,2026-06-17,Billing,P3,Priya,phone,31.0,72,4
+T-50389,2026-09-19,Billing,P3,Luis,phone,12.2,72,5
+T-50390,2026-07-30,API errors,P2,Yuki,email,13.5,24,5
+T-50391,2026-10-29,Feature request,P3,Dana,phone,22.7,72,5
+T-50392,2026-06-17,Billing,P3,Omar,email,7.5,72,5
+T-50393,2026-07-16,Login / SSO,P3,Dana,email,10.8,72,4
+T-50394,2026-09-08,Billing,P2,Tom,email,29.4,24,4
+T-50395,2026-08-19,Feature request,P2,Omar,chat,26.3,24,4
+T-50396,2026-06-21,Data import,P2,Dana,email,9.1,24,5
+T-50397,2026-10-21,Feature request,P1,Priya,email,3.7,4,5
+T-50398,2026-06-08,Billing,P2,Yuki,email,16.1,24,4
+T-50399,2026-10-06,Feature request,P2,Luis,email,12.0,24,5
+T-50400,2026-09-21,API errors,P3,Luis,chat,19.6,72,5
+T-50401,2026-10-16,Billing,P1,Dana,chat,21.9,4,2
+T-50402,2026-07-13,API errors,P3,Tom,email,66.4,72,4
+T-50403,2026-08-26,Outage,P1,Omar,email,8.3,4,3
+T-50404,2026-08-03,API errors,P1,Luis,chat,7.3,4,4
+T-50405,2026-08-31,Billing,P2,Tom,phone,1.1,24,5
+T-50406,2026-08-22,Billing,P3,Yuki,phone,24.3,72,4
+T-50407,2026-07-22,Data import,P3,Luis,chat,7.3,72,5
+T-50408,2026-10-04,Data import,P2,Dana,chat,0.5,24,5
+T-50409,2026-08-13,API errors,P2,Omar,email,23.6,24,4
+T-50410,2026-10-25,Login / SSO,P3,Omar,email,4.7,72,4
+T-50411,2026-08-17,Data import,P1,Priya,chat,10.7,4,4
+T-50412,2026-07-16,Feature request,P3,Omar,email,42.6,72,5
+T-50413,2026-07-27,Billing,P3,Dana,phone,12.5,72,4
+T-50414,2026-07-23,Billing,P3,Dana,email,23.1,72,4
+T-50415,2026-08-24,Feature request,P3,Tom,email,449.3,72,2
+T-50416,2026-08-06,Billing,P3,Tom,phone,38.5,72,5
+T-50417,2026-07-23,Feature request,P3,Omar,chat,169.1,72,3
+T-50418,2026-07-19,Feature request,P2,Tom,email,183.3,24,3
+T-50419,2026-09-23,API errors,P2,Omar,chat,2.2,24,4
+T-50420,2026-07-13,Billing,P3,Priya,phone,28.7,72,4
+T-50421,2026-10-16,Feature request,P2,Yuki,email,20.2,24,4
+T-50422,2026-10-06,Feature request,P3,Yuki,chat,13.4,72,4
+T-50423,2026-06-10,Data import,P2,Luis,chat,39.4,24,3
+T-50424,2026-07-07,API errors,P2,Dana,phone,9.3,24,4
+T-50425,2026-07-24,Feature request,P2,Dana,chat,77.4,24,3
+T-50426,2026-07-22,Feature request,P2,Dana,email,139.1,24,2
+T-50427,2026-07-28,Feature request,P3,Luis,chat,12.2,72,4
+T-50428,2026-10-14,Billing,P2,Luis,chat,3.4,24,4
+T-50429,2026-09-13,Billing,P3,Dana,chat,7.3,72,5
+T-50430,2026-07-30,Billing,P3,Dana,chat,0.3,72,5
+T-50431,2026-07-28,Feature request,P2,Dana,chat,86.2,24,3
+T-50432,2026-08-12,Feature request,P3,Tom,phone,125.0,72,4
+T-50433,2026-08-04,Login / SSO,P2,Omar,phone,2.5,24,5
+T-50434,2026-08-13,Feature request,P2,Luis,chat,60.8,24,3
+T-50435,2026-07-12,Outage,P1,Dana,chat,1.4,4,4
+T-50436,2026-07-29,API errors,P3,Luis,chat,70.1,72,4
+T-50437,2026-09-15,Billing,P2,Tom,chat,11.1,24,4
+T-50438,2026-10-14,API errors,P2,Luis,phone,3.7,24,5
+T-50439,2026-09-02,Billing,P3,Yuki,chat,23.1,72,5
+T-50440,2026-06-28,Login / SSO,P2,Tom,phone,8.5,24,4
+T-50441,2026-08-26,Data import,P2,Luis,chat,17.7,24,5
+T-50442,2026-10-24,Billing,P2,Priya,phone,11.0,24,4
+T-50443,2026-09-11,API errors,P2,Luis,phone,13.7,24,4
+T-50444,2026-08-20,Billing,P3,Yuki,phone,9.4,72,5
+T-50445,2026-06-17,Feature request,P3,Dana,email,5.4,72,5
+T-50446,2026-07-22,Login / SSO,P3,Luis,email,8.2,72,4
+T-50447,2026-10-28,Data import,P3,Tom,email,93.0,72,4
+T-50448,2026-07-09,Feature request,P2,Dana,phone,10.7,24,4
+T-50449,2026-09-29,Data import,P3,Priya,phone,26.5,72,5
+T-50450,2026-06-25,Feature request,P3,Luis,chat,84.6,72,3
+T-50451,2026-06-06,Data import,P2,Priya,email,19.4,24,4
+T-50452,2026-10-24,Outage,P1,Priya,chat,1.3,4,4
+T-50453,2026-08-16,Billing,P2,Luis,email,11.3,24,5
+T-50454,2026-06-22,Feature request,P2,Tom,phone,,24,
+T-50455,2026-08-04,Data import,P2,Priya,email,4.7,24,4
+T-50456,2026-06-14,Data import,P3,Omar,email,23.1,72,4
+T-50457,2026-09-26,Login / SSO,P3,Priya,email,6.5,72,5
+T-50458,2026-06-03,Feature request,P3,Dana,chat,79.6,72,4
+T-50459,2026-09-05,Billing,P3,Yuki,chat,4.1,72,5
+T-50460,2026-08-28,Data import,P2,Yuki,chat,27.9,24,4
+T-50461,2026-08-21,Feature request,P2,Dana,email,,24,
+T-50462,2026-06-20,Feature request,P2,Dana,email,11.7,24,5
+T-50463,2026-06-03,Feature request,P3,Omar,email,77.0,72,4
+T-50464,2026-09-26,API errors,P3,Priya,email,16.0,72,4
+T-50465,2026-07-06,API errors,P1,Omar,email,3.6,4,4
+T-50466,2026-07-30,Billing,P3,Omar,chat,2.4,72,5
+T-50467,2026-07-21,API errors,P2,Tom,phone,35.5,24,4
+T-50468,2026-09-22,API errors,P3,Dana,email,3.3,72,5
+T-50469,2026-10-26,Login / SSO,P3,Omar,chat,21.6,72,4
+T-50470,2026-09-10,Feature request,P2,Yuki,chat,60.5,24,2
+T-50471,2026-09-18,Data import,P2,Priya,phone,6.4,24,4
+T-50472,2026-06-17,Login / SSO,P3,Tom,phone,0.7,72,4
+T-50473,2026-09-19,Billing,P3,Omar,chat,0.8,72,5
+T-50474,2026-09-01,API errors,P3,Yuki,email,19.2,72,4
+T-50475,2026-08-21,API errors,P3,Omar,chat,9.6,72,4
+T-50476,2026-07-19,Login / SSO,P3,Luis,chat,,72,
+T-50477,2026-08-23,Data import,P3,Tom,chat,101.8,72,4
+T-50478,2026-09-07,Data import,P2,Dana,phone,12.0,24,4
+T-50479,2026-09-20,Billing,P2,Omar,email,15.7,24,4
+T-50480,2026-06-25,API errors,P2,Tom,chat,0.5,24,5
+T-50481,2026-10-19,Billing,P3,Luis,phone,3.3,72,5
+T-50482,2026-07-11,Data import,P2,Omar,chat,14.7,24,4
+T-50483,2026-07-07,API errors,P3,Tom,chat,7.7,72,4
+T-50484,2026-07-11,Data import,P3,Priya,email,9.1,72,4
+T-50485,2026-09-04,Data import,P2,Luis,chat,36.2,24,4
+T-50486,2026-09-15,Billing,P2,Priya,phone,2.8,24,5
+T-50487,2026-08-11,Feature request,P3,Yuki,phone,48.6,72,3
+T-50488,2026-08-22,Billing,P2,Yuki,email,15.2,24,4
+T-50489,2026-10-23,Feature request,P2,Dana,email,38.1,24,4
+T-50490,2026-08-22,Data import,P2,Tom,phone,3.4,24,5
+T-50491,2026-07-20,Login / SSO,P2,Priya,chat,9.4,24,3
+T-50492,2026-08-03,Feature request,P1,Dana,email,15.2,4,3
+T-50493,2026-10-03,Feature request,P3,Yuki,email,253.1,72,2
+T-50494,2026-07-01,Feature request,P3,Dana,chat,21.0,72,5
+T-50495,2026-06-03,Login / SSO,P2,Luis,email,2.1,24,5
+T-50496,2026-09-16,Billing,P3,Tom,chat,1.5,72,5
+T-50497,2026-08-20,API errors,P3,Priya,email,1.8,72,5
+T-50498,2026-07-12,API errors,P2,Priya,phone,14.1,24,5
+T-50499,2026-09-05,Data import,P2,Omar,chat,17.6,24,5
+T-50500,2026-06-09,Data import,P2,Priya,email,22.7,24,3
+T-50501,2026-10-06,Feature request,P3,Dana,email,4.0,72,4
+T-50502,2026-07-31,Data import,P3,Priya,email,2.1,72,4
+T-50503,2026-10-13,Data import,P3,Tom,phone,21.3,72,5
+T-50504,2026-09-23,Feature request,P3,Priya,email,10.4,72,5
+T-50505,2026-07-28,Billing,P3,Dana,email,6.5,72,5
+T-50506,2026-07-06,Feature request,P3,Priya,phone,41.7,72,4
+T-50507,2026-09-15,Feature request,P2,Dana,email,47.9,24,3
+T-50508,2026-06-02,Billing,P3,Dana,email,4.3,72,4
+T-50509,2026-06-02,Data import,P2,Omar,chat,54.3,24,4
+T-50510,2026-07-11,API errors,P3,Yuki,chat,28.8,72,5
+T-50511,2026-06-08,Billing,P2,Omar,chat,5.9,24,5
+T-50512,2026-09-08,Billing,P2,Omar,phone,16.3,24,4
+T-50513,2026-07-25,Feature request,P3,Priya,email,130.6,72,4
+T-50514,2026-08-04,API errors,P2,Dana,chat,3.9,24,5
+T-50515,2026-09-08,Billing,P3,Tom,phone,22.9,72,5
+T-50516,2026-10-01,Feature request,P3,Priya,email,49.4,72,3
+T-50517,2026-06-08,API errors,P3,Dana,email,15.5,72,3
+T-50518,2026-10-24,Login / SSO,P2,Dana,chat,19.5,24,4
+T-50519,2026-08-11,Feature request,P2,Dana,email,32.4,24,4
+T-50520,2026-08-07,Feature request,P2,Luis,email,36.6,24,3
+T-50521,2026-07-15,Feature request,P3,Dana,chat,0.9,72,3
+T-50522,2026-10-21,Feature request,P3,Dana,email,19.1,72,3
+T-50523,2026-09-05,Login / SSO,P2,Tom,chat,0.5,24,5
+T-50524,2026-10-26,Data import,P3,Omar,chat,50.1,72,4
+T-50525,2026-08-08,Feature request,P2,Priya,email,1.5,24,4
+T-50526,2026-06-01,Login / SSO,P2,Dana,phone,32.9,24,4
+T-50527,2026-06-13,Data import,P2,Dana,chat,7.4,24,4
+T-50528,2026-09-04,Feature request,P3,Priya,phone,64.5,72,3
+T-50529,2026-09-11,Login / SSO,P2,Priya,email,2.8,24,4
+T-50530,2026-10-05,Feature request,P3,Tom,email,121.6,72,3
+T-50531,2026-09-28,Login / SSO,P2,Yuki,email,3.6,24,5
+T-50532,2026-07-08,Feature request,P2,Yuki,phone,54.8,24,3
+T-50533,2026-07-23,Billing,P3,Tom,chat,31.3,72,3
+T-50534,2026-10-18,Feature request,P3,Dana,email,2.6,72,5
+T-50535,2026-08-25,Feature request,P3,Priya,chat,40.3,72,5
+T-50536,2026-09-09,API errors,P2,Priya,email,4.0,24,4
+T-50537,2026-07-19,API errors,P2,Yuki,chat,20.2,24,2
+T-50538,2026-08-18,Billing,P1,Tom,email,5.0,4,4
+T-50539,2026-07-01,Billing,P1,Omar,chat,2.3,4,5
+T-50540,2026-08-31,Data import,P2,Dana,email,23.8,24,4
+T-50541,2026-10-01,Login / SSO,P3,Yuki,chat,,72,
+T-50542,2026-10-06,Outage,P1,Dana,chat,1.2,4,5
+T-50543,2026-10-16,Feature request,P2,Tom,phone,158.6,24,2
+T-50544,2026-06-10,Data import,P1,Dana,phone,72.4,4,2
+T-50545,2026-06-25,Billing,P2,Omar,chat,6.1,24,4
+T-50546,2026-09-24,Login / SSO,P3,Tom,phone,2.6,72,4
+T-50547,2026-06-08,Billing,P3,Tom,phone,49.4,72,4
+T-50548,2026-06-13,Data import,P3,Dana,chat,6.4,72,5
+T-50549,2026-07-12,Billing,P2,Yuki,email,0.4,24,5
+T-50550,2026-06-02,Billing,P2,Omar,email,4.9,24,5
+T-50551,2026-07-17,Feature request,P1,Omar,phone,15.2,4,2
+T-50552,2026-07-13,Feature request,P2,Omar,phone,9.0,24,4
+T-50553,2026-09-02,API errors,P2,Tom,phone,,24,
+T-50554,2026-10-18,Feature request,P2,Tom,chat,,24,
+T-50555,2026-06-17,API errors,P2,Omar,email,1.5,24,3
+T-50556,2026-10-25,Billing,P2,Luis,phone,2.1,24,5
+T-50557,2026-06-18,Data import,P2,Omar,email,77.8,24,2
+T-50558,2026-09-09,Billing,P2,Dana,email,0.3,24,5
+T-50559,2026-10-28,Billing,P3,Priya,chat,7.6,72,5
+T-50560,2026-09-30,Feature request,P2,Luis,chat,39.0,24,4
+T-50561,2026-06-19,API errors,P3,Luis,chat,2.5,72,5
+T-50562,2026-10-23,Data import,P3,Omar,phone,4.0,72,5
+T-50563,2026-08-07,Data import,P2,Tom,chat,,24,
+T-50564,2026-09-04,Feature request,P1,Yuki,chat,29.7,4,3
+T-50565,2026-09-13,API errors,P3,Omar,phone,16.6,72,5
+T-50566,2026-06-20,Data import,P2,Dana,email,12.5,24,3
+T-50567,2026-08-11,Feature request,P1,Tom,chat,54.0,4,2
+T-50568,2026-08-23,Login / SSO,P3,Tom,phone,27.2,72,3
+T-50569,2026-10-25,API errors,P3,Priya,chat,2.4,72,5
+T-50570,2026-10-15,Outage,P1,Omar,chat,2.2,4,3
+T-50571,2026-08-22,API errors,P2,Yuki,chat,38.0,24,2
+T-50572,2026-09-14,Billing,P2,Yuki,email,3.3,24,4
+T-50573,2026-07-19,Feature request,P3,Priya,phone,69.7,72,3
+T-50574,2026-10-27,Login / SSO,P3,Dana,email,4.4,72,5
+T-50575,2026-08-26,API errors,P3,Omar,chat,3.2,72,4
+T-50576,2026-08-09,Login / SSO,P2,Tom,chat,29.1,24,4
+T-50577,2026-10-19,Billing,P2,Dana,chat,41.3,24,4
+T-50578,2026-10-19,Feature request,P2,Priya,chat,52.6,24,3
+T-50579,2026-06-28,API errors,P2,Tom,email,18.6,24,4
+T-50580,2026-06-14,Billing,P2,Dana,email,0.4,24,4
+T-50581,2026-07-23,Feature request,P3,Omar,email,2.4,72,4
+T-50582,2026-08-10,Billing,P3,Luis,chat,3.3,72,4
+T-50583,2026-07-31,Feature request,P2,Yuki,email,9.9,24,4
+T-50584,2026-09-07,Billing,P3,Yuki,email,,72,
+T-50585,2026-08-09,Billing,P3,Dana,chat,16.6,72,5
+T-50586,2026-07-27,API errors,P3,Dana,chat,5.2,72,4
+T-50587,2026-09-07,Data import,P3,Luis,chat,13.0,72,5
+T-50588,2026-09-06,Billing,P3,Priya,phone,0.3,72,5
+T-50589,2026-10-13,Data import,P3,Dana,phone,9.2,72,4
+T-50590,2026-06-20,Billing,P2,Omar,email,9.2,24,4
+T-50591,2026-08-20,Feature request,P2,Priya,phone,26.1,24,4
+T-50592,2026-10-23,Feature request,P3,Omar,phone,16.8,72,5
+T-50593,2026-08-28,Feature request,P2,Dana,email,26.7,24,4
+T-50594,2026-08-08,Data import,P2,Priya,email,10.0,24,3
+T-50595,2026-10-11,Login / SSO,P3,Luis,email,5.5,72,5
+T-50596,2026-06-24,Billing,P3,Yuki,email,9.6,72,4
+T-50597,2026-07-09,Data import,P2,Tom,chat,13.7,24,5
+T-50598,2026-06-24,Billing,P1,Yuki,phone,9.7,4,3
+T-50599,2026-09-17,Billing,P3,Luis,email,,72,
+T-50600,2026-06-26,API errors,P1,Luis,chat,5.0,4,4
+T-50601,2026-07-18,Feature request,P2,Dana,email,16.9,24,3
+T-50602,2026-06-06,Feature request,P3,Dana,email,41.7,72,5
+T-50603,2026-09-03,Login / SSO,P3,Priya,chat,5.1,72,5
+T-50604,2026-08-03,Billing,P2,Yuki,email,1.8,24,5
+T-50605,2026-10-04,Login / SSO,P3,Tom,phone,12.2,72,5
+T-50606,2026-10-12,Data import,P3,Yuki,chat,9.6,72,5
+T-50607,2026-10-07,Data import,P2,Luis,email,42.9,24,3
+T-50608,2026-08-16,Billing,P3,Tom,chat,2.2,72,5
+T-50609,2026-09-20,Billing,P1,Luis,phone,14.9,4,3
+T-50610,2026-08-17,Feature request,P3,Luis,email,,72,
+T-50611,2026-09-11,Feature request,P2,Tom,email,67.8,24,3
+T-50612,2026-06-26,Login / SSO,P2,Dana,chat,2.1,24,5
+T-50613,2026-06-20,Feature request,P3,Priya,chat,54.7,72,4
+T-50614,2026-08-19,Billing,P2,Luis,email,,24,
+T-50615,2026-08-09,Billing,P3,Yuki,phone,0.6,72,5
+T-50616,2026-08-25,Data import,P2,Tom,phone,63.4,24,2
+T-50617,2026-10-03,API errors,P3,Yuki,phone,,72,
+T-50618,2026-06-18,Feature request,P3,Luis,chat,396.2,72,3
+T-50619,2026-08-08,Login / SSO,P3,Luis,email,0.9,72,4
+T-50620,2026-07-05,Billing,P1,Yuki,email,2.2,4,5
+T-50621,2026-07-24,Data import,P3,Dana,email,0.3,72,5
+T-50622,2026-07-13,Login / SSO,P3,Tom,phone,27.9,72,5
+T-50623,2026-09-04,Data import,P3,Priya,phone,41.8,72,3
+T-50624,2026-10-13,Login / SSO,P3,Omar,phone,1.0,72,4
+T-50625,2026-08-02,Data import,P2,Dana,chat,5.6,24,4
+T-50626,2026-09-12,Data import,P3,Yuki,chat,1.2,72,5
+T-50627,2026-07-28,Billing,P2,Luis,email,18.6,24,4
+T-50628,2026-09-14,API errors,P3,Tom,chat,39.1,72,5
+T-50629,2026-10-02,Billing,P2,Omar,chat,29.7,24,3
+T-50630,2026-09-15,Data import,P2,Dana,chat,14.1,24,5
+T-50631,2026-10-04,Billing,P2,Tom,chat,47.3,24,2
+T-50632,2026-08-26,Login / SSO,P3,Priya,email,1.0,72,5
+T-50633,2026-06-03,Billing,P2,Tom,phone,2.9,24,5
+T-50634,2026-06-01,API errors,P3,Dana,chat,10.2,72,5
+T-50635,2026-08-31,API errors,P3,Dana,chat,,72,
+T-50636,2026-10-28,Login / SSO,P1,Dana,email,0.5,4,5
+T-50637,2026-10-04,Feature request,P3,Yuki,phone,6.8,72,4
+T-50638,2026-07-06,Billing,P3,Yuki,phone,0.7,72,5
+T-50639,2026-08-12,Billing,P3,Priya,phone,0.3,72,5
+T-50640,2026-10-09,Data import,P2,Omar,email,8.0,24,3
+T-50641,2026-08-23,Feature request,P3,Tom,email,25.5,72,5
+T-50642,2026-07-01,Billing,P1,Tom,chat,2.9,4,4
+T-50643,2026-10-02,API errors,P3,Dana,phone,9.1,72,4
+T-50644,2026-10-29,Feature request,P3,Omar,email,21.6,72,4
+T-50645,2026-06-13,Data import,P2,Priya,chat,0.7,24,5
+T-50646,2026-08-22,Data import,P3,Priya,phone,13.1,72,4
+T-50647,2026-07-13,Feature request,P2,Tom,chat,333.2,24,2
+T-50648,2026-08-01,Billing,P3,Tom,chat,12.9,72,5
+T-50649,2026-09-01,Billing,P1,Yuki,email,12.4,4,2
+T-50650,2026-10-07,Billing,P3,Luis,phone,2.3,72,4
+T-50651,2026-10-14,Login / SSO,P2,Yuki,email,30.3,24,3
+T-50652,2026-06-11,Data import,P3,Omar,chat,13.4,72,4
+T-50653,2026-09-13,Billing,P2,Dana,chat,8.9,24,5
+T-50654,2026-10-25,Feature request,P3,Priya,phone,15.8,72,5
+T-50655,2026-10-27,Feature request,P3,Priya,email,,72,
+T-50656,2026-09-24,Billing,P3,Dana,email,2.7,72,5
+T-50657,2026-10-18,Feature request,P2,Dana,phone,168.7,24,4
+T-50658,2026-06-14,Feature request,P3,Yuki,phone,41.2,72,4
+T-50659,2026-07-31,API errors,P3,Tom,email,74.8,72,4
+T-50660,2026-08-24,Billing,P2,Tom,email,,24,
+T-50661,2026-07-14,Feature request,P3,Omar,email,64.3,72,5
+T-50662,2026-07-12,Feature request,P2,Priya,email,26.9,24,3
+T-50663,2026-07-02,Billing,P2,Dana,email,19.2,24,4
+T-50664,2026-08-09,Feature request,P3,Dana,phone,201.4,72,2
+T-50665,2026-08-11,Data import,P2,Priya,chat,33.9,24,4
+T-50666,2026-10-18,Billing,P3,Omar,phone,,72,
+T-50667,2026-06-23,Feature request,P3,Luis,phone,290.6,72,3
+T-50668,2026-08-29,Billing,P3,Tom,chat,0.5,72,5
+T-50669,2026-09-12,Billing,P3,Luis,phone,2.4,72,4
+T-50670,2026-07-29,Billing,P3,Tom,chat,32.4,72,4
+T-50671,2026-07-21,Data import,P3,Dana,phone,50.7,72,5
+T-50672,2026-09-15,Feature request,P3,Dana,chat,83.1,72,4
+T-50673,2026-10-12,Billing,P3,Dana,phone,8.2,72,4
+T-50674,2026-06-09,Feature request,P2,Omar,chat,92.5,24,3
+T-50675,2026-06-10,Data import,P2,Dana,phone,43.0,24,2
+T-50676,2026-07-10,Login / SSO,P2,Tom,phone,3.6,24,3
+T-50677,2026-08-16,Data import,P2,Dana,email,11.5,24,4
+T-50678,2026-06-26,Feature request,P3,Dana,chat,27.0,72,5
+T-50679,2026-10-26,Login / SSO,P2,Dana,phone,1.4,24,4
+T-50680,2026-06-21,Feature request,P3,Yuki,phone,100.1,72,5
+T-50681,2026-08-16,Data import,P3,Tom,chat,4.2,72,5
+T-50682,2026-06-14,Billing,P2,Dana,phone,1.5,24,5
+T-50683,2026-06-11,Billing,P3,Priya,phone,6.3,72,5
+T-50684,2026-08-25,Feature request,P2,Omar,phone,11.1,24,4
+T-50685,2026-06-05,Feature request,P3,Omar,phone,38.1,72,5
+T-50686,2026-06-02,Data import,P3,Priya,phone,25.2,72,5
+T-50687,2026-10-19,Feature request,P2,Tom,phone,29.3,24,4
+T-50688,2026-09-14,Login / SSO,P2,Priya,phone,14.5,24,4
+T-50689,2026-09-16,Feature request,P2,Yuki,email,17.7,24,5
+T-50690,2026-10-26,Feature request,P3,Omar,phone,12.2,72,4
+T-50691,2026-07-30,Login / SSO,P3,Omar,email,,72,
+T-50692,2026-07-26,API errors,P2,Dana,phone,5.2,24,4
+T-50693,2026-07-23,Billing,P2,Luis,email,5.9,24,4
+T-50694,2026-09-14,Feature request,P2,Yuki,phone,28.6,24,3
+T-50695,2026-07-19,Billing,P2,Omar,chat,20.4,24,4
+T-50696,2026-08-04,Feature request,P2,Tom,phone,0.5,24,5
+T-50697,2026-09-14,Data import,P2,Priya,chat,2.6,24,3
+T-50698,2026-09-30,Billing,P3,Yuki,email,15.4,72,4
+T-50699,2026-08-10,Data import,P3,Tom,chat,72.4,72,4
+T-50700,2026-06-05,Login / SSO,P3,Omar,phone,9.1,72,5
+T-50701,2026-08-08,API errors,P2,Yuki,email,20.4,24,5
+T-50702,2026-08-19,Login / SSO,P3,Dana,chat,8.2,72,5
+T-50703,2026-10-21,Login / SSO,P2,Yuki,phone,11.6,24,4
+T-50704,2026-10-14,Feature request,P3,Dana,phone,0.3,72,4
+T-50705,2026-07-18,Login / SSO,P2,Priya,chat,0.7,24,4
+T-50706,2026-10-29,Login / SSO,P3,Tom,chat,2.4,72,5
+T-50707,2026-07-21,Billing,P2,Priya,chat,,24,
+T-50708,2026-10-15,Login / SSO,P3,Luis,phone,2.4,72,4
+T-50709,2026-10-23,Billing,P1,Luis,phone,22.6,4,3
+T-50710,2026-06-19,Outage,P1,Yuki,email,0.3,4,5
+T-50711,2026-09-03,Login / SSO,P2,Priya,phone,,24,
+T-50712,2026-10-29,Data import,P3,Luis,email,48.5,72,5
+T-50713,2026-10-16,Feature request,P3,Luis,phone,,72,
+T-50714,2026-06-02,Login / SSO,P2,Tom,email,28.2,24,3
+T-50715,2026-06-26,Feature request,P3,Yuki,phone,5.6,72,5
+T-50716,2026-09-24,Login / SSO,P2,Luis,email,,24,
+T-50717,2026-10-25,Outage,P1,Priya,email,0.3,4,5
+T-50718,2026-07-16,Login / SSO,P1,Luis,chat,1.3,4,4
+T-50719,2026-07-01,Login / SSO,P2,Omar,phone,7.8,24,5
+T-50720,2026-09-19,Feature request,P3,Dana,email,10.0,72,5
+T-50721,2026-09-16,Data import,P3,Luis,email,2.5,72,5
+T-50722,2026-07-13,Data import,P2,Yuki,phone,6.8,24,5
+T-50723,2026-08-24,Feature request,P3,Luis,phone,130.5,72,3
+T-50724,2026-09-23,Data import,P3,Yuki,phone,12.2,72,4
+T-50725,2026-06-06,Login / SSO,P3,Priya,phone,1.3,72,5
+T-50726,2026-10-27,Data import,P2,Omar,phone,2.7,24,5
+T-50727,2026-10-01,Feature request,P2,Omar,phone,30.1,24,4
+T-50728,2026-07-17,Feature request,P1,Luis,phone,46.5,4,3
+T-50729,2026-10-16,Data import,P1,Priya,email,17.7,4,3
+T-50730,2026-07-05,Login / SSO,P2,Dana,email,10.6,24,5
+T-50731,2026-07-08,API errors,P2,Dana,phone,15.7,24,4
+T-50732,2026-08-22,Data import,P3,Omar,email,13.6,72,5
+T-50733,2026-06-07,Feature request,P3,Omar,chat,,72,
+T-50734,2026-10-28,Billing,P3,Omar,email,0.8,72,4
+T-50735,2026-09-04,Data import,P3,Omar,chat,1.3,72,4
+T-50736,2026-10-08,Login / SSO,P3,Priya,email,6.2,72,4
+T-50737,2026-10-26,Data import,P2,Priya,email,17.1,24,4
+T-50738,2026-06-11,Feature request,P2,Tom,chat,,24,
+T-50739,2026-06-13,Data import,P1,Priya,chat,0.3,4,4
+T-50740,2026-09-01,Login / SSO,P2,Priya,email,7.7,24,4
+T-50741,2026-10-09,Data import,P3,Priya,email,5.7,72,5
+T-50742,2026-10-26,Data import,P3,Dana,chat,10.4,72,5
+T-50743,2026-10-21,Billing,P2,Priya,email,6.2,24,5
+T-50744,2026-10-13,Feature request,P3,Dana,chat,12.3,72,5
+T-50745,2026-10-21,Login / SSO,P3,Omar,phone,,72,
+T-50746,2026-07-16,Feature request,P3,Tom,email,85.6,72,2
+T-50747,2026-07-19,Data import,P2,Dana,email,16.5,24,4
+T-50748,2026-08-15,API errors,P3,Yuki,phone,20.7,72,5
+T-50749,2026-08-16,API errors,P2,Luis,phone,2.8,24,5
+T-50750,2026-07-25,Feature request,P3,Priya,email,6.6,72,4
+T-50751,2026-09-08,Feature request,P2,Priya,chat,10.2,24,4
+T-50752,2026-09-03,Feature request,P3,Omar,email,24.9,72,4
+T-50753,2026-06-06,Feature request,P3,Tom,chat,119.3,72,3
+T-50754,2026-10-14,Data import,P3,Dana,phone,15.5,72,5
+T-50755,2026-10-07,Billing,P2,Priya,phone,7.3,24,5
+T-50756,2026-06-10,Billing,P3,Omar,chat,3.4,72,4
+T-50757,2026-07-24,Login / SSO,P3,Priya,phone,21.0,72,4
+T-50758,2026-07-07,Billing,P3,Dana,phone,16.4,72,4
+T-50759,2026-07-02,Data import,P2,Yuki,phone,17.3,24,4
+T-50760,2026-09-12,Billing,P2,Luis,chat,,24,
+T-50761,2026-06-22,Feature request,P3,Yuki,chat,150.2,72,3
+T-50762,2026-09-08,Feature request,P2,Yuki,phone,6.0,24,5
+T-50763,2026-07-18,Feature request,P1,Dana,email,14.0,4,2
+T-50764,2026-09-15,API errors,P2,Luis,phone,1.9,24,4
+T-50765,2026-10-06,Data import,P2,Priya,phone,6.7,24,4
+T-50766,2026-09-15,Billing,P3,Yuki,chat,24.8,72,4
+T-50767,2026-08-19,Billing,P1,Dana,phone,9.3,4,3
+T-50768,2026-10-17,Feature request,P2,Luis,phone,20.7,24,3
+T-50769,2026-07-20,Billing,P3,Omar,email,1.9,72,5
+T-50770,2026-06-19,API errors,P3,Priya,email,4.4,72,4
+T-50771,2026-08-15,API errors,P3,Yuki,phone,2.2,72,5
+T-50772,2026-06-06,Billing,P2,Priya,phone,15.1,24,5
+T-50773,2026-06-30,Billing,P3,Tom,email,24.7,72,4
+T-50774,2026-06-15,Feature request,P3,Luis,email,44.1,72,4
+T-50775,2026-06-19,Data import,P3,Omar,email,8.5,72,5
+T-50776,2026-08-27,Feature request,P2,Tom,chat,47.5,24,4
+T-50777,2026-10-22,API errors,P2,Luis,phone,16.5,24,5
+T-50778,2026-06-11,Feature request,P2,Priya,chat,7.4,24,5
+T-50779,2026-07-31,Feature request,P2,Omar,phone,38.9,24,3
+T-50780,2026-06-12,Feature request,P2,Omar,phone,14.3,24,4
+T-50781,2026-06-05,Data import,P3,Dana,phone,20.5,72,4
+T-50782,2026-08-14,API errors,P1,Luis,chat,5.4,4,4
+T-50783,2026-10-25,API errors,P2,Omar,phone,15.6,24,4
+T-50784,2026-08-15,API errors,P2,Omar,phone,28.4,24,3
+T-50785,2026-06-23,Feature request,P3,Priya,chat,132.0,72,3
+T-50786,2026-10-24,API errors,P3,Priya,chat,4.6,72,4
+T-50787,2026-07-20,API errors,P3,Luis,email,49.0,72,5
+T-50788,2026-09-19,Login / SSO,P2,Yuki,email,3.1,24,5
+T-50789,2026-09-30,Outage,P1,Omar,chat,0.5,4,5
+T-50790,2026-06-08,Outage,P1,Luis,phone,3.1,4,4
+T-50791,2026-08-23,Login / SSO,P3,Yuki,phone,6.7,72,5
+T-50792,2026-07-06,Login / SSO,P3,Yuki,email,6.4,72,5
+T-50793,2026-07-01,Feature request,P3,Omar,chat,239.7,72,1
+T-50794,2026-07-08,Login / SSO,P3,Priya,email,3.1,72,5
+T-50795,2026-09-05,Feature request,P2,Omar,email,25.4,24,5
+T-50796,2026-09-18,Billing,P2,Omar,chat,1.0,24,5
+T-50797,2026-07-01,API errors,P3,Luis,chat,4.6,72,3
+T-50798,2026-08-19,Data import,P2,Priya,email,41.7,24,4
+T-50799,2026-06-02,Data import,P2,Yuki,chat,24.2,24,4
+T-50800,2026-06-15,Feature request,P2,Tom,phone,13.4,24,5
+T-50801,2026-06-07,Login / SSO,P3,Dana,email,0.3,72,5
+T-50802,2026-08-15,API errors,P2,Dana,email,15.9,24,4
+T-50803,2026-10-28,Feature request,P3,Omar,email,179.1,72,3
+T-50804,2026-08-11,Billing,P2,Tom,email,5.7,24,4
+T-50805,2026-07-06,API errors,P2,Tom,phone,37.3,24,3
+T-50806,2026-06-24,Billing,P1,Tom,email,24.7,4,3
+T-50807,2026-10-23,Outage,P1,Yuki,chat,3.6,4,3
+T-50808,2026-10-15,Billing,P3,Luis,email,3.0,72,4
+T-50809,2026-07-14,Feature request,P2,Tom,phone,24.5,24,4
+T-50810,2026-07-23,Feature request,P2,Luis,chat,113.6,24,3
+T-50811,2026-07-31,Billing,P3,Omar,chat,17.4,72,5
+T-50812,2026-08-28,Data import,P3,Luis,chat,10.4,72,5
+T-50813,2026-07-14,Login / SSO,P3,Priya,chat,,72,
+T-50814,2026-06-25,Login / SSO,P1,Priya,email,3.4,4,4
+T-50815,2026-06-27,Data import,P3,Yuki,chat,11.2,72,5
+T-50816,2026-07-18,API errors,P2,Luis,chat,1.3,24,5
+T-50817,2026-07-17,Feature request,P3,Luis,phone,6.5,72,5
+T-50818,2026-10-04,Data import,P3,Omar,email,33.8,72,4
+T-50819,2026-07-30,Feature request,P3,Yuki,phone,124.6,72,4
+T-50820,2026-06-08,API errors,P2,Yuki,phone,6.6,24,5
+T-50821,2026-10-29,Billing,P3,Omar,chat,7.9,72,4
+T-50822,2026-10-06,Data import,P1,Tom,email,10.7,4,1
+T-50823,2026-06-01,Feature request,P1,Luis,phone,28.3,4,3
+T-50824,2026-06-23,Login / SSO,P3,Omar,chat,29.1,72,4
+T-50825,2026-09-23,Billing,P2,Omar,phone,27.7,24,3
+T-50826,2026-06-19,API errors,P3,Luis,chat,64.0,72,4
+T-50827,2026-06-11,Outage,P1,Yuki,phone,2.4,4,4
+T-50828,2026-06-05,Data import,P3,Luis,email,67.3,72,5
+T-50829,2026-07-29,Feature request,P3,Yuki,chat,65.1,72,4
+T-50830,2026-07-04,Data import,P2,Yuki,phone,7.8,24,3
+T-50831,2026-06-17,API errors,P3,Priya,email,16.7,72,4
+T-50832,2026-08-31,API errors,P2,Luis,chat,41.2,24,3
+T-50833,2026-10-17,Data import,P2,Omar,chat,32.2,24,4
+T-50834,2026-06-17,Feature request,P3,Omar,chat,76.3,72,4
+T-50835,2026-10-17,API errors,P2,Yuki,email,2.6,24,4
+T-50836,2026-10-11,Feature request,P2,Tom,email,92.9,24,3
+T-50837,2026-10-13,Feature request,P3,Omar,email,0.3,72,4
+T-50838,2026-09-01,API errors,P3,Tom,phone,40.6,72,4
+T-50839,2026-06-10,Login / SSO,P2,Dana,phone,0.3,24,5
+T-50840,2026-08-04,Login / SSO,P2,Yuki,phone,1.2,24,4
+T-50841,2026-08-15,Data import,P2,Luis,phone,4.5,24,5
+T-50842,2026-07-27,Feature request,P3,Luis,phone,120.7,72,4
+T-50843,2026-07-13,Feature request,P2,Omar,chat,18.1,24,4
+T-50844,2026-07-16,Feature request,P3,Priya,phone,147.2,72,4
+T-50845,2026-07-27,Billing,P3,Luis,email,20.3,72,4
+T-50846,2026-10-08,Login / SSO,P3,Omar,chat,0.7,72,4
+T-50847,2026-10-11,Billing,P3,Tom,chat,5.5,72,4
+T-50848,2026-08-13,Feature request,P3,Luis,chat,,72,
+T-50849,2026-10-10,API errors,P2,Dana,email,27.8,24,4
+T-50850,2026-07-13,Feature request,P3,Yuki,email,2.9,72,4
+T-50851,2026-09-09,Billing,P2,Priya,email,3.7,24,5
+T-50852,2026-06-28,Login / SSO,P2,Luis,chat,1.5,24,5
+T-50853,2026-06-25,Feature request,P3,Tom,chat,29.4,72,4
+T-50854,2026-08-08,Billing,P3,Luis,email,30.5,72,4
+T-50855,2026-09-25,Billing,P2,Yuki,email,4.8,24,4
+T-50856,2026-10-22,API errors,P3,Omar,chat,1.0,72,5
+T-50857,2026-10-13,Billing,P3,Priya,email,8.2,72,4
+T-50858,2026-09-18,Feature request,P3,Priya,chat,32.3,72,4
+T-50859,2026-07-13,Data import,P2,Omar,chat,3.3,24,4
+T-50860,2026-08-11,Outage,P1,Priya,chat,2.3,4,4
+T-50861,2026-08-13,Feature request,P3,Luis,phone,11.7,72,5
+T-50862,2026-09-18,Feature request,P3,Dana,email,253.5,72,3
+T-50863,2026-07-29,Billing,P2,Luis,email,8.8,24,3
+T-50864,2026-06-30,Billing,P3,Priya,email,16.1,72,5
+T-50865,2026-09-17,Data import,P3,Luis,chat,17.8,72,4
+T-50866,2026-10-13,Login / SSO,P3,Tom,chat,10.4,72,5
+T-50867,2026-07-27,Feature request,P3,Omar,phone,33.0,72,4
+T-50868,2026-07-09,Feature request,P3,Luis,email,82.4,72,3
+T-50869,2026-06-18,Feature request,P2,Luis,email,44.8,24,3
+T-50870,2026-06-17,Feature request,P2,Yuki,chat,8.1,24,4
+T-50871,2026-06-03,API errors,P1,Yuki,chat,34.7,4,2
+T-50872,2026-10-20,Data import,P2,Dana,phone,13.7,24,4
+T-50873,2026-07-17,Billing,P2,Tom,chat,41.4,24,3
+T-50874,2026-08-08,Feature request,P2,Tom,email,71.4,24,2
+T-50875,2026-09-25,API errors,P3,Omar,phone,7.7,72,4
+T-50876,2026-07-17,Billing,P1,Dana,email,12.7,4,3
+T-50877,2026-07-26,Billing,P3,Omar,email,26.0,72,5
+T-50878,2026-08-23,Feature request,P3,Luis,phone,12.0,72,4
+T-50879,2026-06-26,Data import,P2,Priya,phone,29.0,24,3
+T-50880,2026-10-20,Billing,P2,Luis,email,8.0,24,4
+T-50881,2026-10-17,Feature request,P3,Yuki,chat,13.6,72,5
+T-50882,2026-09-27,Data import,P2,Tom,email,52.9,24,3
+T-50883,2026-08-04,API errors,P2,Tom,phone,24.8,24,3
+T-50884,2026-10-28,Billing,P3,Luis,chat,5.8,72,4
+T-50885,2026-09-28,Login / SSO,P3,Tom,email,15.4,72,5
+T-50886,2026-08-23,Data import,P3,Yuki,email,3.3,72,4
+T-50887,2026-06-26,Feature request,P3,Priya,phone,8.7,72,4
+T-50888,2026-07-15,Feature request,P3,Dana,phone,2.3,72,4
+T-50889,2026-10-08,Feature request,P3,Tom,email,215.2,72,2
+T-50890,2026-09-04,API errors,P3,Priya,email,17.6,72,4
+T-50891,2026-06-11,Feature request,P3,Priya,email,13.5,72,4
+T-50892,2026-10-25,Feature request,P3,Yuki,email,115.9,72,3
+T-50893,2026-10-25,Feature request,P3,Dana,email,,72,
+T-50894,2026-10-29,API errors,P2,Omar,chat,,24,
+T-50895,2026-10-09,Billing,P2,Yuki,email,2.1,24,5
+T-50896,2026-06-22,API errors,P3,Yuki,chat,3.8,72,4
+T-50897,2026-07-09,Billing,P2,Luis,phone,1.2,24,4
+T-50898,2026-09-13,Feature request,P3,Omar,phone,37.7,72,5
+T-50899,2026-09-12,Billing,P2,Luis,phone,,24,
+T-50900,2026-08-27,Feature request,P2,Yuki,email,65.0,24,3
+T-50901,2026-07-25,Billing,P3,Yuki,email,0.4,72,4
+T-50902,2026-08-17,API errors,P2,Dana,chat,24.0,24,4
+T-50903,2026-06-06,Billing,P2,Omar,email,15.6,24,3
+T-50904,2026-07-05,API errors,P2,Priya,email,2.6,24,4
+T-50905,2026-09-02,Feature request,P3,Priya,phone,312.9,72,3
+T-50906,2026-07-25,Feature request,P1,Yuki,email,75.5,4,2
+T-50907,2026-06-05,Feature request,P3,Luis,chat,89.9,72,4
+T-50908,2026-10-17,Feature request,P3,Priya,email,27.4,72,5
+T-50909,2026-06-20,Login / SSO,P1,Luis,chat,,4,
+T-50910,2026-09-01,Feature request,P2,Tom,phone,102.9,24,2
+T-50911,2026-06-22,API errors,P2,Yuki,email,,24,
+T-50912,2026-10-14,Billing,P3,Dana,chat,10.5,72,5
+T-50913,2026-06-02,Feature request,P2,Omar,email,15.0,24,4
+T-50914,2026-09-12,API errors,P3,Yuki,phone,50.2,72,4
+T-50915,2026-08-18,Data import,P2,Priya,chat,21.5,24,3
+T-50916,2026-08-03,Login / SSO,P3,Dana,chat,1.7,72,3
+T-50917,2026-06-12,Data import,P1,Dana,email,17.8,4,2
+T-50918,2026-09-14,Feature request,P3,Dana,chat,48.4,72,4
+T-50919,2026-07-12,Feature request,P2,Dana,phone,33.1,24,3
+T-50920,2026-06-08,Data import,P2,Dana,phone,44.6,24,3
+T-50921,2026-10-09,Billing,P2,Tom,chat,0.8,24,5
+T-50922,2026-08-13,Billing,P1,Yuki,chat,4.5,4,4
+T-50923,2026-07-15,Login / SSO,P3,Luis,phone,,72,
+T-50924,2026-10-14,Data import,P2,Tom,email,44.7,24,3
+T-50925,2026-08-25,Billing,P3,Omar,email,2.2,72,5
+T-50926,2026-09-21,API errors,P2,Tom,chat,73.5,24,2
+T-50927,2026-07-06,API errors,P3,Tom,email,,72,
+T-50928,2026-09-12,Outage,P1,Dana,chat,1.6,4,4
+T-50929,2026-06-18,API errors,P1,Dana,chat,25.4,4,2
+T-50930,2026-08-07,Billing,P3,Yuki,phone,8.8,72,5
+T-50931,2026-08-09,Billing,P3,Priya,email,8.5,72,5
+T-50932,2026-10-07,Billing,P3,Yuki,phone,0.4,72,5
+T-50933,2026-09-10,Feature request,P3,Yuki,email,91.8,72,3
+T-50934,2026-07-01,Data import,P2,Tom,phone,66.5,24,2
+T-50935,2026-09-06,Login / SSO,P2,Luis,chat,18.7,24,4
+T-50936,2026-07-15,API errors,P2,Tom,phone,41.4,24,4
+T-50937,2026-08-14,API errors,P3,Dana,phone,14.0,72,4
+T-50938,2026-09-19,Feature request,P2,Omar,email,113.1,24,3
+T-50939,2026-10-17,Data import,P3,Dana,phone,40.9,72,5
+T-50940,2026-08-06,API errors,P3,Yuki,email,1.6,72,5
+T-50941,2026-10-25,Login / SSO,P3,Yuki,email,4.3,72,5
+T-50942,2026-09-22,Feature request,P2,Omar,phone,197.0,24,2
+T-50943,2026-10-09,API errors,P3,Dana,chat,0.5,72,5
+T-50944,2026-07-01,Data import,P2,Priya,phone,13.2,24,4
+T-50945,2026-09-21,Feature request,P3,Priya,email,215.7,72,3
+T-50946,2026-09-30,Login / SSO,P1,Omar,email,2.3,4,4
+T-50947,2026-06-22,Feature request,P2,Tom,email,38.5,24,3
+T-50948,2026-08-09,Data import,P2,Yuki,phone,34.5,24,3
+T-50949,2026-09-09,Feature request,P2,Omar,chat,51.8,24,2
+T-50950,2026-07-01,Billing,P2,Dana,chat,3.0,24,5
+T-50951,2026-10-05,Billing,P2,Omar,phone,23.0,24,3
+T-50952,2026-09-05,API errors,P2,Tom,phone,12.6,24,4
+T-50953,2026-08-14,API errors,P2,Yuki,phone,16.3,24,4
+T-50954,2026-08-07,Data import,P3,Tom,chat,,72,
+T-50955,2026-09-22,Data import,P2,Yuki,chat,0.3,24,4
+T-50956,2026-08-31,Billing,P3,Luis,email,8.7,72,4
+T-50957,2026-07-27,Billing,P3,Tom,phone,5.6,72,5
+T-50958,2026-09-20,Login / SSO,P1,Priya,phone,0.9,4,5
+T-50959,2026-09-17,Data import,P3,Dana,email,0.5,72,5
+T-50960,2026-10-29,Login / SSO,P3,Omar,phone,13.6,72,4
+T-50961,2026-07-23,Feature request,P3,Dana,chat,75.3,72,2
+T-50962,2026-08-27,Feature request,P3,Luis,chat,,72,
+T-50963,2026-09-11,Login / SSO,P3,Omar,email,,72,
+T-50964,2026-08-17,Data import,P3,Priya,email,15.1,72,5
+T-50965,2026-08-10,Feature request,P3,Yuki,email,1.7,72,5
+T-50966,2026-06-17,Data import,P3,Luis,phone,32.6,72,4
+T-50967,2026-06-01,API errors,P3,Tom,email,57.9,72,4
+T-50968,2026-08-09,Billing,P1,Dana,chat,5.3,4,4
+T-50969,2026-10-18,API errors,P3,Omar,email,8.8,72,4
+T-50970,2026-10-19,API errors,P3,Yuki,email,9.3,72,4
+T-50971,2026-08-20,Login / SSO,P3,Dana,phone,9.8,72,5
+T-50972,2026-07-17,Billing,P3,Omar,chat,0.6,72,5
+T-50973,2026-06-30,Feature request,P1,Dana,phone,4.4,4,4
+T-50974,2026-10-16,Billing,P3,Yuki,chat,14.0,72,5
+T-50975,2026-07-03,Outage,P1,Yuki,chat,0.3,4,5
+T-50976,2026-06-02,API errors,P2,Yuki,chat,0.8,24,4
+T-50977,2026-07-16,Data import,P3,Tom,phone,1.9,72,4
+T-50978,2026-10-21,Feature request,P3,Tom,chat,102.6,72,5
+T-50979,2026-08-19,Billing,P3,Priya,chat,3.8,72,5
+T-50980,2026-10-25,Login / SSO,P3,Priya,phone,3.6,72,5
+T-50981,2026-07-04,Feature request,P1,Priya,chat,16.7,4,2
+T-50982,2026-07-18,Feature request,P3,Priya,chat,88.3,72,4
+T-50983,2026-06-14,API errors,P2,Omar,email,0.3,24,5
+T-50984,2026-07-17,Billing,P2,Tom,chat,59.5,24,4
+T-50985,2026-08-20,Login / SSO,P2,Tom,email,,24,
+T-50986,2026-06-26,Billing,P3,Yuki,chat,1.0,72,4
+T-50987,2026-09-08,Data import,P3,Dana,chat,110.4,72,4
+T-50988,2026-10-02,API errors,P3,Yuki,email,19.9,72,4
+T-50989,2026-08-31,Billing,P3,Dana,phone,5.9,72,4
+T-50990,2026-07-13,Data import,P2,Tom,phone,40.3,24,4
+T-50991,2026-07-23,Billing,P2,Luis,chat,7.5,24,5
+T-50992,2026-09-07,Login / SSO,P3,Yuki,phone,,72,
+T-50993,2026-07-14,Login / SSO,P3,Priya,email,2.8,72,4
+T-50994,2026-10-21,Login / SSO,P2,Luis,chat,7.1,24,5
+T-50995,2026-09-18,Billing,P3,Omar,phone,2.9,72,4
+T-50996,2026-07-21,Data import,P3,Dana,phone,41.1,72,5
+T-50997,2026-08-13,Outage,P1,Yuki,phone,4.4,4,4
+T-50998,2026-06-22,Outage,P1,Tom,phone,3.2,4,4
+T-50999,2026-07-14,API errors,P2,Yuki,phone,0.5,24,5
+T-51000,2026-09-30,Billing,P1,Dana,phone,4.4,4,5
+T-51001,2026-06-11,Feature request,P3,Omar,email,17.7,72,5
+T-51002,2026-07-29,Data import,P3,Yuki,email,8.6,72,5
+T-51003,2026-08-18,Login / SSO,P2,Omar,phone,0.3,24,5
+T-51004,2026-09-10,Billing,P1,Yuki,chat,5.8,4,5
+T-51005,2026-08-11,Outage,P1,Omar,chat,0.9,4,4
+T-51006,2026-10-15,Login / SSO,P1,Yuki,phone,1.4,4,4
+T-51007,2026-10-20,Login / SSO,P3,Omar,phone,0.7,72,4
+T-51008,2026-07-02,API errors,P2,Tom,phone,4.6,24,4
+T-51009,2026-10-24,Feature request,P3,Yuki,email,51.9,72,4
+T-51010,2026-06-16,Feature request,P3,Priya,email,21.9,72,4
+T-51011,2026-07-06,Login / SSO,P2,Luis,email,,24,
+T-51012,2026-10-17,Feature request,P3,Tom,email,148.7,72,2
+T-51013,2026-10-21,Login / SSO,P3,Yuki,email,6.3,72,4
+T-51014,2026-10-19,Billing,P2,Tom,email,12.5,24,4
+T-51015,2026-07-15,Feature request,P3,Yuki,email,43.7,72,4
+T-51016,2026-06-30,Billing,P2,Luis,email,0.3,24,4
+T-51017,2026-09-07,Billing,P3,Tom,phone,11.1,72,5
+T-51018,2026-10-02,API errors,P3,Dana,email,,72,
+T-51019,2026-09-07,Feature request,P2,Priya,phone,95.6,24,2
+T-51020,2026-08-21,Login / SSO,P3,Omar,chat,6.3,72,4
+T-51021,2026-10-19,Login / SSO,P3,Luis,chat,6.2,72,4
+T-51022,2026-06-26,Feature request,P3,Luis,chat,2.1,72,5
+T-51023,2026-08-11,Feature request,P1,Omar,chat,172.4,4,2
+T-51024,2026-06-12,Feature request,P2,Omar,phone,34.4,24,4
+T-51025,2026-06-23,Data import,P2,Omar,email,27.2,24,4
+T-51026,2026-06-01,Outage,P1,Yuki,phone,4.9,4,3
+T-51027,2026-06-11,Login / SSO,P3,Dana,phone,4.4,72,5
+T-51028,2026-10-19,Feature request,P2,Yuki,phone,13.6,24,3
+T-51029,2026-09-26,Data import,P2,Yuki,chat,33.8,24,3
+T-51030,2026-10-23,API errors,P3,Yuki,phone,2.0,72,4
+T-51031,2026-09-18,Billing,P1,Tom,phone,3.6,4,3
+T-51032,2026-07-31,Data import,P2,Dana,chat,3.0,24,5
+T-51033,2026-10-12,Data import,P3,Luis,chat,18.9,72,4
+T-51034,2026-10-20,Outage,P1,Yuki,chat,5.8,4,4
+T-51035,2026-07-01,Data import,P3,Tom,email,24.4,72,5
+T-51036,2026-08-15,API errors,P2,Luis,phone,7.8,24,5
+T-51037,2026-09-12,API errors,P2,Tom,email,81.0,24,3
+T-51038,2026-08-25,Billing,P3,Dana,chat,7.2,72,5
+T-51039,2026-07-04,Feature request,P2,Yuki,chat,6.7,24,3
+T-51040,2026-06-12,Data import,P3,Yuki,chat,8.5,72,5
+T-51041,2026-10-26,Data import,P1,Omar,phone,,4,
+T-51042,2026-08-27,Data import,P3,Dana,email,11.6,72,4
+T-51043,2026-09-29,Feature request,P2,Yuki,phone,288.8,24,2
+T-51044,2026-06-15,Feature request,P2,Yuki,phone,5.6,24,4
+T-51045,2026-09-24,Billing,P3,Luis,phone,2.7,72,5
+T-51046,2026-09-04,Feature request,P3,Dana,chat,0.4,72,5
+T-51047,2026-06-16,Feature request,P3,Yuki,chat,5.8,72,5
+T-51048,2026-06-23,Feature request,P2,Tom,email,40.9,24,3
+T-51049,2026-09-21,Feature request,P2,Yuki,chat,3.3,24,5
+T-51050,2026-06-02,API errors,P3,Priya,phone,50.3,72,4
+T-51051,2026-08-19,Billing,P3,Priya,phone,8.3,72,5
+T-51052,2026-10-21,Data import,P2,Tom,phone,33.7,24,4
+T-51053,2026-06-30,Login / SSO,P3,Omar,email,3.2,72,4
+T-51054,2026-07-22,Outage,P1,Yuki,phone,4.9,4,3
+T-51055,2026-08-25,Feature request,P1,Priya,phone,2.8,4,4
+T-51056,2026-08-15,Billing,P2,Omar,chat,2.4,24,4
+T-51057,2026-08-01,Data import,P3,Luis,phone,9.1,72,5
+T-51058,2026-09-23,Data import,P3,Yuki,phone,4.7,72,5
+T-51059,2026-08-16,Outage,P1,Yuki,email,8.0,4,3
+T-51060,2026-08-16,Data import,P3,Luis,chat,11.5,72,5
+T-51061,2026-09-22,Login / SSO,P2,Omar,chat,15.7,24,4
+T-51062,2026-07-11,Billing,P3,Luis,email,2.3,72,5
+T-51063,2026-08-25,API errors,P3,Priya,phone,37.2,72,3
+T-51064,2026-06-27,Billing,P3,Dana,email,22.0,72,4
+T-51065,2026-09-08,Data import,P3,Omar,chat,,72,
+T-51066,2026-09-22,Feature request,P3,Dana,chat,68.7,72,4
+T-51067,2026-07-30,Feature request,P2,Priya,email,22.7,24,5
+T-51068,2026-06-22,API errors,P3,Luis,phone,17.6,72,4
+T-51069,2026-06-03,Login / SSO,P3,Tom,phone,1.9,72,5
+T-51070,2026-06-29,Feature request,P1,Omar,phone,24.7,4,3
+T-51071,2026-09-21,API errors,P3,Yuki,chat,16.1,72,4
+T-51072,2026-10-05,Login / SSO,P3,Tom,phone,1.1,72,5
+T-51073,2026-09-02,Billing,P2,Luis,email,10.3,24,4
+T-51074,2026-08-13,Billing,P3,Yuki,email,31.6,72,4
+T-51075,2026-06-01,API errors,P3,Luis,email,5.2,72,5
+T-51076,2026-08-12,Data import,P3,Yuki,email,1.5,72,4
+T-51077,2026-08-26,Outage,P1,Yuki,phone,6.4,4,3
+T-51078,2026-08-02,Data import,P3,Omar,email,52.8,72,4
+T-51079,2026-10-03,Billing,P2,Yuki,email,,24,
+T-51080,2026-10-19,Data import,P2,Yuki,chat,1.3,24,5
+T-51081,2026-08-01,Data import,P1,Yuki,email,122.1,4,2
+T-51082,2026-08-13,API errors,P3,Omar,chat,5.9,72,4
+T-51083,2026-09-09,Feature request,P1,Tom,email,72.9,4,3
+T-51084,2026-06-03,Login / SSO,P3,Luis,chat,0.5,72,4
+T-51085,2026-07-18,Login / SSO,P3,Tom,email,3.6,72,5
+T-51086,2026-07-09,API errors,P3,Luis,email,4.0,72,5
+T-51087,2026-06-09,Billing,P3,Omar,chat,8.5,72,4
+T-51088,2026-10-17,Login / SSO,P3,Tom,email,8.8,72,5
+T-51089,2026-06-30,Billing,P3,Tom,email,1.7,72,5
+T-51090,2026-09-25,Login / SSO,P3,Yuki,phone,2.4,72,4
+T-51091,2026-07-18,Data import,P3,Yuki,chat,2.0,72,5
+T-51092,2026-08-01,Billing,P3,Luis,phone,5.4,72,4
+T-51093,2026-10-12,Billing,P2,Priya,phone,2.1,24,4
+T-51094,2026-06-30,Billing,P3,Priya,email,1.0,72,5
+T-51095,2026-07-17,API errors,P3,Omar,phone,3.4,72,5
+T-51096,2026-10-13,API errors,P1,Yuki,chat,24.6,4,3
+T-51097,2026-10-23,Feature request,P3,Dana,chat,6.0,72,4
+T-51098,2026-10-29,Login / SSO,P3,Yuki,phone,12.8,72,4
+T-51099,2026-07-13,Outage,P1,Dana,chat,3.7,4,3
+T-51100,2026-07-26,Feature request,P2,Tom,email,7.5,24,4
+T-51101,2026-07-15,Data import,P3,Priya,phone,35.8,72,5
+T-51102,2026-07-14,Billing,P3,Tom,email,23.1,72,4
+T-51103,2026-08-15,Billing,P2,Omar,email,7.7,24,5
+T-51104,2026-08-11,Billing,P2,Priya,phone,6.7,24,4
+T-51105,2026-10-13,Billing,P3,Dana,phone,13.8,72,5
+T-51106,2026-07-03,API errors,P3,Omar,email,,72,
+T-51107,2026-08-10,API errors,P3,Omar,email,44.3,72,4
+T-51108,2026-08-31,Billing,P2,Luis,email,19.0,24,5
+T-51109,2026-07-04,Billing,P3,Tom,email,12.6,72,5
+T-51110,2026-06-01,Data import,P2,Dana,chat,25.2,24,4
+T-51111,2026-10-28,Data import,P2,Yuki,email,2.2,24,4
+T-51112,2026-06-23,API errors,P3,Omar,phone,8.6,72,5
+T-51113,2026-10-28,Billing,P3,Yuki,email,13.8,72,5
+T-51114,2026-10-17,Login / SSO,P3,Dana,email,10.3,72,4
+T-51115,2026-07-01,Feature request,P2,Dana,chat,32.7,24,4
+T-51116,2026-09-15,Data import,P3,Tom,chat,72.9,72,4
+T-51117,2026-07-10,Login / SSO,P2,Yuki,chat,0.5,24,3
+T-51118,2026-08-13,Data import,P2,Priya,chat,33.2,24,5
+T-51119,2026-08-18,Outage,P1,Luis,phone,2.8,4,4
+T-51120,2026-09-05,Data import,P1,Luis,email,4.0,4,4
+T-51121,2026-08-05,Billing,P3,Tom,phone,4.4,72,5
+T-51122,2026-08-22,Login / SSO,P3,Luis,email,1.9,72,4
+T-51123,2026-06-26,Data import,P2,Tom,email,53.3,24,3
+T-51124,2026-06-22,Feature request,P3,Yuki,chat,64.4,72,4
+T-51125,2026-08-12,Feature request,P3,Luis,phone,176.5,72,3
+T-51126,2026-07-28,Billing,P3,Luis,email,2.8,72,5
+T-51127,2026-10-14,Billing,P3,Dana,phone,6.9,72,5
+T-51128,2026-09-08,Login / SSO,P3,Yuki,chat,14.9,72,3
+T-51129,2026-08-08,API errors,P3,Omar,email,20.5,72,4
+T-51130,2026-09-03,Data import,P2,Priya,phone,18.3,24,5
+T-51131,2026-09-19,Data import,P3,Priya,email,5.1,72,4
+T-51132,2026-10-16,Login / SSO,P2,Dana,chat,7.2,24,5
+T-51133,2026-07-18,Data import,P3,Yuki,chat,31.4,72,4
+T-51134,2026-09-23,API errors,P2,Luis,chat,,24,
+T-51135,2026-10-29,Billing,P2,Priya,email,43.7,24,4
+T-51136,2026-08-07,Outage,P1,Yuki,email,3.2,4,5
+T-51137,2026-08-17,Feature request,P3,Priya,chat,90.0,72,4
+T-51138,2026-07-28,Login / SSO,P3,Omar,email,0.7,72,4
+T-51139,2026-07-02,Data import,P3,Yuki,email,15.1,72,5
+T-51140,2026-09-23,Billing,P3,Yuki,email,1.0,72,4
+T-51141,2026-08-11,Billing,P3,Luis,chat,13.4,72,5
+T-51142,2026-10-06,Login / SSO,P3,Tom,email,0.5,72,4
+T-51143,2026-06-07,Feature request,P3,Tom,email,127.0,72,4
+T-51144,2026-07-04,Feature request,P2,Tom,chat,93.0,24,2
+T-51145,2026-06-29,Billing,P2,Dana,phone,3.3,24,5
+T-51146,2026-09-21,Login / SSO,P2,Dana,chat,,24,
+T-51147,2026-06-12,Login / SSO,P3,Luis,phone,0.3,72,5
+T-51148,2026-08-19,Billing,P2,Tom,email,3.7,24,5
+T-51149,2026-10-25,API errors,P2,Dana,email,18.9,24,4
+T-51150,2026-06-23,Feature request,P3,Luis,phone,40.9,72,4
+T-51151,2026-10-11,Login / SSO,P3,Luis,email,9.0,72,5
+T-51152,2026-10-03,API errors,P2,Priya,phone,24.5,24,3
+T-51153,2026-07-08,API errors,P3,Omar,chat,3.0,72,5
+T-51154,2026-10-12,Login / SSO,P3,Luis,chat,,72,
+T-51155,2026-07-27,Feature request,P3,Luis,chat,91.4,72,3
+T-51156,2026-09-29,Outage,P1,Dana,chat,1.5,4,4
+T-51157,2026-10-06,Billing,P2,Dana,email,15.5,24,5
+T-51158,2026-10-04,Data import,P2,Tom,phone,5.3,24,3
+T-51159,2026-10-20,Feature request,P3,Yuki,email,15.1,72,4
+T-51160,2026-09-20,Feature request,P2,Priya,chat,153.9,24,2
+T-51161,2026-08-23,Feature request,P2,Priya,email,35.1,24,4
+T-51162,2026-07-10,Outage,P1,Luis,phone,0.5,4,5
+T-51163,2026-08-14,Billing,P2,Luis,phone,2.9,24,5
+T-51164,2026-07-18,Billing,P3,Priya,chat,2.0,72,5
+T-51165,2026-08-26,Billing,P3,Omar,chat,,72,
+T-51166,2026-10-01,Login / SSO,P3,Luis,chat,12.0,72,4
+T-51167,2026-08-10,Data import,P3,Luis,phone,,72,
+T-51168,2026-08-18,Login / SSO,P3,Omar,email,8.9,72,4
+T-51169,2026-07-27,Billing,P3,Luis,phone,14.9,72,5
+T-51170,2026-09-30,Data import,P3,Tom,phone,42.4,72,5
+T-51171,2026-09-01,Login / SSO,P2,Yuki,email,2.3,24,5
+T-51172,2026-08-08,Data import,P2,Yuki,phone,1.6,24,5
+T-51173,2026-06-05,Login / SSO,P2,Omar,email,5.1,24,4
+T-51174,2026-10-06,API errors,P2,Luis,email,7.1,24,4
+T-51175,2026-07-14,Feature request,P1,Luis,chat,34.2,4,4
+T-51176,2026-06-23,Billing,P3,Dana,phone,1.6,72,5
+T-51177,2026-09-12,Login / SSO,P3,Yuki,phone,3.7,72,4
+T-51178,2026-09-18,Data import,P1,Tom,phone,26.7,4,3
+T-51179,2026-07-18,Outage,P1,Omar,chat,0.4,4,5
+T-51180,2026-10-15,API errors,P3,Omar,chat,15.6,72,4
+T-51181,2026-07-24,Login / SSO,P3,Omar,email,17.0,72,5
+T-51182,2026-09-06,Billing,P2,Luis,phone,,24,
+T-51183,2026-08-25,API errors,P3,Dana,email,3.2,72,4
+T-51184,2026-06-07,Billing,P1,Tom,phone,26.8,4,2
+T-51185,2026-10-01,Data import,P3,Dana,chat,,72,
+T-51186,2026-08-18,Feature request,P2,Omar,chat,22.2,24,4
+T-51187,2026-09-24,Data import,P3,Dana,chat,56.5,72,4
+T-51188,2026-08-24,API errors,P1,Tom,chat,1.0,4,5
+T-51189,2026-06-10,API errors,P2,Tom,chat,25.6,24,3
+T-51190,2026-10-23,Data import,P2,Luis,chat,23.1,24,4
+T-51191,2026-09-03,Login / SSO,P2,Omar,chat,,24,
+T-51192,2026-07-12,Login / SSO,P2,Omar,chat,3.7,24,4
+T-51193,2026-10-22,API errors,P3,Priya,chat,29.4,72,5
+T-51194,2026-09-20,Feature request,P2,Priya,chat,17.1,24,5
+T-51195,2026-08-05,Feature request,P2,Priya,chat,92.4,24,1
+T-51196,2026-08-02,API errors,P3,Luis,phone,22.4,72,5
+T-51197,2026-08-09,Data import,P2,Priya,phone,,24,
+T-51198,2026-07-14,Feature request,P3,Dana,phone,9.5,72,4
+T-51199,2026-10-01,Data import,P3,Luis,phone,28.3,72,4
+T-51200,2026-06-26,API errors,P3,Dana,phone,4.6,72,4
+T-51201,2026-07-15,Data import,P1,Tom,phone,4.8,4,3
+T-51202,2026-09-14,Login / SSO,P2,Tom,email,5.0,24,5
+T-51203,2026-08-02,Feature request,P2,Priya,email,0.6,24,4
+T-51204,2026-10-24,Billing,P3,Dana,phone,0.6,72,5
+T-51205,2026-06-30,Feature request,P2,Tom,phone,24.6,24,3
+T-51206,2026-10-28,API errors,P2,Omar,email,6.6,24,5
+T-51207,2026-06-21,API errors,P2,Yuki,phone,41.0,24,4
+T-51208,2026-08-23,Login / SSO,P2,Luis,email,3.0,24,5
+T-51209,2026-06-13,Feature request,P3,Priya,phone,129.8,72,4
+T-51210,2026-08-03,Feature request,P1,Tom,chat,23.4,4,3
+T-51211,2026-06-05,Data import,P3,Omar,phone,7.9,72,4
+T-51212,2026-10-17,API errors,P3,Dana,phone,28.5,72,4
+T-51213,2026-07-07,Login / SSO,P3,Priya,phone,5.1,72,4
+T-51214,2026-10-03,Billing,P3,Priya,chat,5.8,72,4
+T-51215,2026-07-24,Billing,P1,Dana,chat,18.4,4,1
+T-51216,2026-10-22,Feature request,P2,Priya,chat,56.4,24,3
+T-51217,2026-07-11,Billing,P3,Luis,email,2.2,72,5
+T-51218,2026-09-11,Billing,P2,Dana,email,8.5,24,5
+T-51219,2026-08-04,Login / SSO,P2,Tom,chat,5.7,24,4
+T-51220,2026-06-03,Feature request,P2,Tom,chat,62.1,24,2
+T-51221,2026-08-20,API errors,P2,Omar,email,4.6,24,4
+T-51222,2026-07-30,Billing,P3,Yuki,chat,13.3,72,5
+T-51223,2026-08-09,Billing,P1,Luis,phone,,4,
+T-51224,2026-10-27,Login / SSO,P1,Dana,phone,9.9,4,3
+T-51225,2026-09-04,Feature request,P2,Omar,chat,3.6,24,3
+T-51226,2026-06-27,API errors,P3,Tom,chat,51.3,72,4
+T-51227,2026-07-17,Data import,P3,Dana,phone,57.2,72,4
+T-51228,2026-09-21,Data import,P3,Omar,email,3.7,72,5
+T-51229,2026-06-11,Billing,P2,Yuki,chat,16.2,24,5
+T-51230,2026-08-12,Data import,P3,Yuki,email,27.4,72,5
+T-51231,2026-06-20,API errors,P2,Dana,email,25.3,24,4
+T-51232,2026-07-01,Outage,P1,Yuki,phone,,4,
+T-51233,2026-09-15,Login / SSO,P3,Omar,email,9.9,72,4
+T-51234,2026-10-03,Data import,P1,Dana,email,7.6,4,2
+T-51235,2026-10-29,API errors,P2,Yuki,phone,57.0,24,2
+T-51236,2026-10-05,Feature request,P3,Luis,chat,6.5,72,5
+T-51237,2026-08-03,Feature request,P3,Tom,email,26.9,72,5
+T-51238,2026-09-05,Billing,P2,Omar,phone,11.4,24,4
+T-51239,2026-07-20,Feature request,P2,Omar,email,143.7,24,2
+T-51240,2026-08-15,Outage,P1,Dana,phone,1.1,4,3
+T-51241,2026-08-24,Data import,P3,Tom,email,,72,
+T-51242,2026-09-05,Billing,P2,Omar,email,14.5,24,3
+T-51243,2026-08-05,Feature request,P2,Luis,phone,58.7,24,2
+T-51244,2026-08-21,API errors,P2,Priya,email,8.6,24,5
+T-51245,2026-07-10,Billing,P2,Dana,chat,0.3,24,4
+T-51246,2026-07-05,Data import,P2,Priya,chat,0.6,24,5
+T-51247,2026-09-14,Billing,P2,Luis,chat,2.5,24,4
+T-51248,2026-09-11,Feature request,P3,Luis,chat,15.9,72,4
+T-51249,2026-08-15,Billing,P3,Luis,chat,,72,
+T-51250,2026-10-10,Billing,P3,Omar,email,0.3,72,4
+T-51251,2026-07-28,Billing,P3,Dana,phone,,72,
+T-51252,2026-07-11,Data import,P3,Omar,email,1.5,72,5
+T-51253,2026-08-15,Feature request,P2,Dana,phone,43.0,24,3
+T-51254,2026-09-15,Billing,P2,Tom,email,13.8,24,5
+T-51255,2026-10-16,Data import,P2,Priya,email,1.3,24,5
+T-51256,2026-06-11,Feature request,P3,Luis,chat,95.0,72,2
+T-51257,2026-08-20,API errors,P2,Omar,phone,11.8,24,4
+T-51258,2026-09-11,Data import,P3,Omar,chat,30.4,72,4
+T-51259,2026-07-07,API errors,P2,Tom,email,36.1,24,4
+T-51260,2026-08-18,Billing,P2,Dana,email,11.7,24,4
+T-51261,2026-10-09,Login / SSO,P2,Yuki,phone,14.9,24,4
+T-51262,2026-09-23,Feature request,P2,Tom,phone,18.0,24,3
+T-51263,2026-07-12,API errors,P2,Luis,phone,11.5,24,4
+T-51264,2026-09-19,Billing,P2,Dana,email,5.5,24,4
+T-51265,2026-07-12,Billing,P3,Luis,email,7.7,72,4
+T-51266,2026-06-12,Feature request,P1,Luis,phone,23.7,4,3
+T-51267,2026-10-20,API errors,P3,Tom,phone,33.6,72,3
+T-51268,2026-06-16,Billing,P3,Tom,chat,1.1,72,4
+T-51269,2026-07-16,Feature request,P3,Luis,phone,111.4,72,4
+T-51270,2026-07-23,API errors,P2,Tom,phone,7.0,24,4
+T-51271,2026-10-17,Billing,P3,Tom,chat,44.0,72,3
+T-51272,2026-08-18,Billing,P2,Dana,email,,24,
+T-51273,2026-07-11,Billing,P3,Luis,phone,2.2,72,5
+T-51274,2026-07-18,Feature request,P2,Yuki,email,37.1,24,4
+T-51275,2026-06-06,Data import,P2,Tom,phone,20.6,24,4
+T-51276,2026-07-13,Feature request,P3,Yuki,phone,0.4,72,5
+T-51277,2026-06-20,Feature request,P2,Tom,phone,104.8,24,3
+T-51278,2026-09-16,API errors,P2,Yuki,phone,13.9,24,4
+T-51279,2026-10-06,API errors,P2,Omar,phone,,24,
+T-51280,2026-09-09,Feature request,P2,Omar,email,28.4,24,3
+T-51281,2026-06-25,API errors,P2,Tom,phone,4.3,24,5
+T-51282,2026-07-12,Data import,P3,Luis,email,9.3,72,4
+T-51283,2026-07-05,Feature request,P3,Yuki,chat,,72,
+T-51284,2026-09-14,API errors,P2,Priya,chat,8.8,24,4
+T-51285,2026-06-06,API errors,P2,Yuki,chat,13.2,24,3
+T-51286,2026-10-25,Login / SSO,P2,Priya,phone,2.0,24,5
+T-51287,2026-10-08,Billing,P3,Dana,phone,18.8,72,4
+T-51288,2026-09-11,Feature request,P2,Yuki,email,79.2,24,4
+T-51289,2026-08-14,Outage,P1,Yuki,chat,,4,
+T-51290,2026-07-13,Login / SSO,P3,Yuki,email,6.5,72,5
+T-51291,2026-06-09,Billing,P3,Luis,email,1.8,72,4
+T-51292,2026-06-16,Data import,P2,Yuki,phone,0.4,24,4
+T-51293,2026-10-21,Billing,P2,Yuki,phone,21.0,24,4
+T-51294,2026-08-18,Feature request,P2,Yuki,chat,65.9,24,2
+T-51295,2026-06-28,Feature request,P3,Tom,email,87.0,72,3
+T-51296,2026-09-23,Billing,P3,Dana,email,,72,
+T-51297,2026-09-08,Billing,P2,Tom,chat,25.7,24,5
+T-51298,2026-08-31,API errors,P1,Dana,phone,7.8,4,3
+T-51299,2026-10-17,Billing,P2,Priya,chat,10.9,24,4
+T-51300,2026-07-01,Feature request,P3,Luis,phone,45.4,72,4
+T-51301,2026-07-23,Feature request,P1,Omar,chat,33.5,4,3
+T-51302,2026-06-12,Feature request,P2,Priya,chat,30.0,24,5
+T-51303,2026-09-04,API errors,P3,Dana,chat,2.9,72,5
+T-51304,2026-09-20,Feature request,P3,Luis,chat,123.5,72,3
+T-51305,2026-07-17,Feature request,P2,Dana,phone,8.0,24,5
+T-51306,2026-08-06,Login / SSO,P3,Tom,chat,7.5,72,5
+T-51307,2026-08-23,Data import,P3,Luis,email,10.2,72,4
+T-51308,2026-10-04,Data import,P2,Luis,phone,39.0,24,4
+T-51309,2026-06-15,Login / SSO,P2,Luis,email,0.3,24,4
+T-51310,2026-07-31,Feature request,P3,Omar,chat,153.9,72,2
+T-51311,2026-08-09,Data import,P2,Yuki,phone,16.9,24,4
+T-51312,2026-07-14,API errors,P3,Omar,phone,3.2,72,4
+T-51313,2026-08-20,Feature request,P2,Dana,email,6.4,24,4
+T-51314,2026-06-14,Data import,P1,Omar,chat,,4,
+T-51315,2026-09-25,API errors,P2,Tom,chat,10.6,24,5
+T-51316,2026-07-07,API errors,P2,Yuki,chat,5.7,24,5
+T-51317,2026-10-25,Billing,P3,Priya,phone,6.2,72,4
+T-51318,2026-10-04,Billing,P2,Dana,email,7.1,24,5
+T-51319,2026-07-22,Feature request,P1,Omar,phone,16.4,4,3
+T-51320,2026-09-18,Outage,P1,Yuki,phone,8.3,4,3
+T-51321,2026-10-01,Billing,P3,Luis,phone,,72,
+T-51322,2026-06-17,Data import,P2,Dana,chat,8.3,24,4
+T-51323,2026-07-25,Data import,P3,Omar,email,57.5,72,4
+T-51324,2026-06-28,Billing,P3,Omar,chat,4.4,72,4
+T-51325,2026-06-23,Login / SSO,P2,Tom,chat,14.4,24,5
+T-51326,2026-08-19,API errors,P1,Tom,phone,7.3,4,3
+T-51327,2026-09-19,API errors,P3,Priya,email,4.9,72,4
+T-51328,2026-10-15,API errors,P2,Priya,phone,14.5,24,4
+T-51329,2026-08-27,Billing,P3,Omar,chat,1.8,72,4
+T-51330,2026-08-15,Feature request,P2,Omar,phone,29.6,24,3
+T-51331,2026-09-26,Login / SSO,P3,Tom,chat,9.4,72,5
+T-51332,2026-08-29,Login / SSO,P3,Luis,phone,8.4,72,4
+T-51333,2026-07-16,Billing,P3,Tom,phone,2.8,72,4
+T-51334,2026-06-19,Feature request,P3,Priya,email,102.9,72,4
+T-51335,2026-09-24,API errors,P3,Tom,chat,,72,
+T-51336,2026-08-07,Feature request,P3,Dana,chat,155.8,72,3
+T-51337,2026-09-09,Feature request,P2,Dana,phone,241.2,24,2
+T-51338,2026-10-14,Login / SSO,P1,Tom,email,7.5,4,3
+T-51339,2026-10-16,API errors,P3,Priya,email,1.3,72,5
+T-51340,2026-10-25,Feature request,P3,Luis,chat,59.7,72,3
+T-51341,2026-09-17,Login / SSO,P3,Yuki,chat,15.5,72,5
+T-51342,2026-08-20,Billing,P3,Yuki,phone,13.6,72,4
+T-51343,2026-08-21,Billing,P3,Omar,phone,2.2,72,4
+T-51344,2026-08-01,Feature request,P2,Dana,phone,,24,
+T-51345,2026-09-30,Billing,P3,Omar,chat,3.7,72,4
+T-51346,2026-10-14,Billing,P1,Yuki,phone,4.0,4,4
+T-51347,2026-08-23,Feature request,P1,Luis,email,3.8,4,4
+T-51348,2026-10-14,Feature request,P3,Tom,email,74.0,72,3
+T-51349,2026-08-29,Feature request,P1,Yuki,phone,42.8,4,3
+T-51350,2026-08-25,Billing,P1,Tom,phone,14.2,4,3
+T-51351,2026-08-03,Feature request,P2,Priya,chat,5.4,24,5
+T-51352,2026-06-30,API errors,P2,Priya,phone,1.7,24,4
+T-51353,2026-10-09,API errors,P3,Tom,phone,69.7,72,3
+T-51354,2026-09-05,API errors,P3,Priya,chat,8.4,72,5
+T-51355,2026-08-05,Billing,P2,Omar,phone,3.0,24,5
+T-51356,2026-09-27,Outage,P1,Priya,email,9.6,4,4
+T-51357,2026-08-16,Login / SSO,P3,Priya,chat,,72,
+T-51358,2026-10-22,Feature request,P1,Luis,chat,47.5,4,3
+T-51359,2026-10-09,Data import,P2,Priya,phone,45.3,24,4
+T-51360,2026-10-27,Login / SSO,P2,Priya,phone,1.6,24,5
+T-51361,2026-09-11,Feature request,P2,Omar,phone,18.1,24,4
+T-51362,2026-10-24,Feature request,P3,Yuki,phone,11.4,72,5
+T-51363,2026-08-21,Data import,P2,Priya,phone,30.9,24,3
+T-51364,2026-08-24,Login / SSO,P3,Tom,email,8.3,72,4
+T-51365,2026-10-20,Billing,P3,Dana,chat,32.2,72,4
+T-51366,2026-06-09,Feature request,P3,Luis,phone,13.6,72,5
+T-51367,2026-09-22,Data import,P3,Priya,email,23.2,72,3
+T-51368,2026-08-12,Feature request,P2,Tom,chat,,24,
+T-51369,2026-06-04,Billing,P3,Dana,phone,9.7,72,4
+T-51370,2026-07-18,Feature request,P3,Tom,chat,85.0,72,4
+T-51371,2026-08-07,Feature request,P3,Luis,email,4.2,72,5
+T-51372,2026-09-27,Feature request,P2,Priya,email,8.6,24,5
+T-51373,2026-10-05,Billing,P3,Omar,chat,11.7,72,4
+T-51374,2026-08-01,Outage,P1,Omar,phone,5.5,4,3
+T-51375,2026-06-26,Data import,P3,Luis,email,68.1,72,4
+T-51376,2026-09-30,API errors,P3,Tom,phone,4.7,72,5
+T-51377,2026-09-04,Data import,P2,Tom,email,3.2,24,5
+T-51378,2026-07-25,Login / SSO,P3,Dana,phone,1.1,72,4
+T-51379,2026-09-06,Billing,P2,Dana,email,7.5,24,5
+T-51380,2026-07-14,Data import,P2,Luis,email,1.3,24,5
+T-51381,2026-07-31,API errors,P3,Tom,chat,14.3,72,5
+T-51382,2026-06-03,Feature request,P3,Tom,email,44.7,72,4
+T-51383,2026-07-05,Billing,P2,Yuki,phone,4.1,24,5
+T-51384,2026-06-09,Data import,P2,Luis,email,23.4,24,4
+T-51385,2026-10-23,Billing,P3,Yuki,email,0.4,72,5
+T-51386,2026-08-04,Billing,P1,Omar,phone,3.8,4,4
+T-51387,2026-10-05,Data import,P2,Luis,email,2.6,24,5
+T-51388,2026-09-13,Data import,P2,Luis,chat,1.2,24,5
+T-51389,2026-07-04,Login / SSO,P3,Luis,email,1.2,72,4
+T-51390,2026-06-22,Login / SSO,P3,Omar,phone,0.9,72,5
+T-51391,2026-08-18,Feature request,P3,Tom,phone,146.3,72,3
+T-51392,2026-09-16,Billing,P3,Priya,email,10.3,72,5
+T-51393,2026-06-21,Feature request,P2,Yuki,phone,63.3,24,3
+T-51394,2026-08-31,Billing,P3,Priya,email,8.8,72,4
+T-51395,2026-06-29,Billing,P2,Yuki,chat,3.9,24,5
+T-51396,2026-08-13,Data import,P2,Yuki,chat,29.0,24,3
+T-51397,2026-10-10,Data import,P2,Luis,email,24.7,24,4
+T-51398,2026-09-25,Data import,P2,Yuki,chat,6.6,24,5
+T-51399,2026-06-23,Feature request,P3,Dana,phone,225.6,72,2

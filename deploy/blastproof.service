@@ -1,0 +1,28 @@
+[Unit]
+Description=Blastproof sandboxed AI analyst
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+User=blastproof
+Group=blastproof
+SupplementaryGroups=docker
+WorkingDirectory=/opt/blastproof
+EnvironmentFile=/opt/blastproof/.env
+ExecStart=/opt/blastproof/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --proxy-headers --forwarded-allow-ips 127.0.0.1
+Restart=always
+RestartSec=3
+# Hardening for the control plane itself
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/blastproof
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

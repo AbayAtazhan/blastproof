@@ -1,0 +1,14 @@
+{DOMAIN} {
+	encode gzip
+	request_body {
+		max_size 25MB
+	}
+	reverse_proxy 127.0.0.1:8000 {
+		# stream agent events (SSE) without buffering
+		flush_interval -1
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+}

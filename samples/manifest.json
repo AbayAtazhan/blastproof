@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "invoices",
+    "file": "vendor_invoices.csv",
+    "name": "Vendor invoices (AP, 2026)",
+    "questions": [
+      "Find likely duplicate invoices and the total amount at risk",
+      "Which vendors' invoice amounts spiked recently? Chart monthly spend for them",
+      "How much is overdue or disputed, by vendor?",
+      "Flag outlier invoices that need a manual review"
+    ]
+  },
+  {
+    "slug": "saas",
+    "file": "saas_revenue.csv",
+    "name": "SaaS revenue (MRR by customer)",
+    "questions": [
+      "Chart MRR by plan over time and tell me the growth rate",
+      "Which region has the lowest churn?",
+      "What is net revenue retention over the last 12 months?",
+      "Which plan should we invest in, based on revenue and churn?"
+    ]
+  },
+  {
+    "slug": "support",
+    "file": "support_tickets.csv",
+    "name": "Support tickets (Jun-Oct 2026)",
+    "questions": [
+      "Which categories breach SLA most often?",
+      "Does resolution time drive CSAT? Show a chart",
+      "Which agent needs coaching and why?",
+      "Weekly ticket volume trend by channel"
+    ]
+  }
+]

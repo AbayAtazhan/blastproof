@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blastproof · sandboxed AI analyst</title>
+  <meta name="description" content="An AI data analyst that writes and runs real code, with a blast radius of zero. Built on Vultr.">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.2 5.1 13.4 12 15 6.9-1.6 12-7.8 12-15V7L16 2Z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m10.5 16 4 4 7-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="brand-name">Blastproof</div>
+        <div class="brand-sub">AI analyst · blast radius zero</div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="analyst" role="tab">Analyst</button>
+      <button class="tab" data-view="audit" role="tab">Audit log</button>
+      <button class="tab" data-view="policy" role="tab">How it's contained</button>
+    </nav>
+    <div class="pills" id="pills"></div>
+  </header>
+
+  <div id="banner" class="banner hidden"></div>
+
+  <main id="view-analyst" class="view analyst">
+    <aside class="sidebar">
+      <div class="side-head">Datasets</div>
+      <ul id="datasets" class="ds-list"></ul>
+      <label class="dropzone" id="dropzone">
+        <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,.xls,.json,.parquet" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Upload a file</b><br><small>CSV, Excel, JSON, Parquet · parsed inside a sandbox</small></span>
+      </label>
+    </aside>
+
+    <section class="workspace">
+      <div id="ds-header" class="ds-header"></div>
+      <div id="thread" class="thread"></div>
+      <div class="composer">
+        <div id="suggestions" class="suggestions"></div>
+        <form id="ask" class="ask">
+          <textarea id="question" rows="1" placeholder="Ask a question about this data…" maxlength="1000"></textarea>
+          <button type="submit" id="send" class="btn-primary">Run in sandbox</button>
+        </form>
+      </div>
+    </section>
+
+    <aside class="monitor">
+      <div class="side-head">Containment monitor</div>
+      <div id="stats" class="stats"></div>
+      <div class="side-head small">This session's sandboxes</div>
+      <div id="live" class="live"><p class="muted">Sandboxes appear here as the agent runs code.</p></div>
+    </aside>
+  </main>
+
+  <main id="view-audit" class="view page hidden">
+    <div class="page-head">
+      <h1>Sandbox audit log</h1>
+      <p>Every container the agent ever started: what it was for, the limits it ran under, what the sandbox blocked, and proof it was destroyed.</p>
+    </div>
+    <div id="audit-stats" class="stats wide"></div>
+    <div class="table-wrap"><table class="audit"><thead><tr>
+      <th>Sandbox</th><th>Started</th><th>Purpose</th><th>Runtime</th><th>Duration</th><th>Exit</th><th>Pre-flight review</th><th>Blocked by sandbox</th><th>Destroyed</th>
+    </tr></thead><tbody id="audit-body"></tbody></table></div>
+  </main>
+
+  <main id="view-policy" class="view page hidden">
+    <div class="page-head">
+      <h1>How Blastproof contains an AI agent</h1>
+      <p>The model is treated as untrusted. It can write any code it wants, and that code can only touch a disposable sandbox with no network, no secrets and hard resource limits.</p>
+    </div>
+    <div class="arch">
+      <div class="arch-col">
+        <div class="arch-box user">Browser<small>question + file</small></div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-col">
+        <div class="arch-box trusted">Control plane · Vultr Cloud Compute<small>FastAPI · agent loop · audit log<br>holds the only API key</small></div>
+        <div class="arch-down">↕ HTTPS</div>
+        <div class="arch-box vultr">Vultr Serverless Inference<small>plans, writes and explains code<br>+ optional chart check</small></div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-col">
+        <div class="arch-box sandbox">Disposable sandbox<small>one container per run<br>no network · no secrets · read-only<br>destroyed after every run</small></div>
+      </div>
+    </div>
+    <h2>Defense layers on every run</h2>
+    <div class="table-wrap"><table class="policy"><thead><tr><th>Layer</th><th>Rule</th><th>Effect</th></tr></thead><tbody id="policy-body"></tbody></table></div>
+    <h2>Agent loop</h2>
+    <ol class="loop">
+      <li><b>Profile</b>: the uploaded file is parsed <i>inside a sandbox</i>, and every text cell is scanned for prompt-injection text.</li>
+      <li><b>Plan + code</b>: the model on Vultr Inference writes a plan and a complete Python script.</li>
+      <li><b>Pre-flight review</b>: static analysis flags network, process, file-write and secret access before anything runs.</li>
+      <li><b>Execute</b>: a fresh, locked-down container runs the code and returns stdout, errors and charts.</li>
+      <li><b>Self-heal</b>: on errors or blocked operations the model gets the real traceback and retries (up to 3 attempts).</li>
+      <li><b>Explain + receipts</b>: the answer is written only from sandbox output, then every number in it is checked against what the code actually printed.</li>
+    </ol>
+  </main>
+
+  <template id="tpl-empty">
+    <div class="empty">
+      <h2>Ask your data anything.</h2>
+      <p>Blastproof writes real Python, runs it in a disposable Vultr sandbox and answers with numbers it can prove.</p>
+    </div>
+  </template>
+</body>
+</html>
