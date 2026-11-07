@@ -14,6 +14,8 @@ plans, writes pandas/matplotlib code, repairs its own errors, makes charts, and 
 can prove.
 
 > Hackathon: **Vultr Agent Rush · Challenge 1 "Blast Radius Zero"** (Pattern A: sandboxed code execution)
+>
+> **Live demo:** https://45-32-228-194.sslip.io (Vultr Cloud Compute, sandboxes under gVisor)
 
 ![architecture](docs/architecture.svg)
 
@@ -71,6 +73,10 @@ the client now detects empty answers and retries with a larger budget.
   (pandas `AttributeError`), the agent repaired it from the real traceback; receipts 18/18; chart check: pass.
 - **Prompt injection in data:** the planted cell (row 363) is detected during sandboxed profiling; the model
   printed a warning in its own code and ignored it.
+- **gVisor on the Vultr VM:** inside a sandbox `platform.release()` reports `4.19.0-gvisor` while the host
+  runs `6.8.0`, so agent code never talks to the host kernel. On the same VM: metadata endpoint
+  (169.254.169.254) and DNS unreachable, memory bomb OOM-killed, read-only paths refused, `sleep(30)`
+  stopped at the limit, zero leftover containers.
 - **Containment moment:** asked to fetch a live FX rate, the agent wrote `urllib` code (pre-flight: **high
   risk**), the sandbox blocked it (`--network none`, DNS failure), and the answer reported it honestly.
 

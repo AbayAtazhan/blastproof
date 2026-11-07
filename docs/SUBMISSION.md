@@ -42,7 +42,11 @@ FastAPI, pandas, matplotlib, Server-Sent Events, Caddy
 
 **Track:** Challenge 1: Blast Radius Zero (Pattern A: sandboxed code execution)
 
-**Links to fill:** GitHub repo URL · demo URL (`https://<ip-with-dashes>.sslip.io`) · video · slides PDF
+**Demo application platform:** Vultr Cloud Compute (Ubuntu 24.04, Docker + gVisor, Caddy HTTPS)
+
+**Application URL:** https://45-32-228-194.sslip.io
+
+**Links still to fill:** GitHub repo URL · video URL · slides PDF (`docs/Blastproof-slides.pdf`) · cover (`docs/cover.png`)
 
 ## Demo video script (target 3:30, hard limit < 5:00)
 

@@ -27,6 +27,14 @@ def parse_reply(text: str) -> tuple[list[str], str | None]:
     return plan[:8], code
 
 
+def _parse_verdict(text: str) -> dict:
+    """Read {"verdict": ..., "note": ...} even if the JSON is wrapped in prose or cut off."""
+    v = re.search(r'"verdict"\s*:\s*"(pass|warn)"', text, re.I)
+    n = re.search(r'"note"\s*:\s*"([^"]*)', text)
+    return {"verdict": v.group(1).lower() if v else "warn",
+            "note": (n.group(1) if n else text)[:160]}
+
+
 def dataset_paths(settings: Settings, dataset: dict) -> tuple[Path, str]:
     host_dir = settings.data_dir / "datasets" / dataset["id"]
     return host_dir, f"{DATA_MOUNT}/{dataset['filename']}"
@@ -268,9 +276,8 @@ class Analyst:
             reply = await self.llm.complete([{"role": "user", "content": [
                 {"type": "text", "text": prompts.VISION_PROMPT.format(question=question)},
                 {"type": "image_url", "image_url": {"url": img}}]}],
-                model=model, temperature=0, max_tokens=600)
-            match = re.search(r"\{.*\}", reply.text, re.S)
-            verdict = json.loads(match.group(0)) if match else {"verdict": "warn", "note": reply.text[:120]}
+                model=model, temperature=0, max_tokens=1500)
+            verdict = _parse_verdict(reply.text)
             await self.store.emit(job_id, "chart_check", {"artifact": chart.name, "model": model,
                                                           "verdict": verdict.get("verdict", "warn"),
                                                           "note": str(verdict.get("note", ""))[:200]})

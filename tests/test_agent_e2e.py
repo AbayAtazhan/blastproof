@@ -101,3 +101,10 @@ def test_agent_self_heals_and_answers_with_receipts():
     assert answer["receipts"]["checked"] == 1 and answer["receipts"]["matched"] == 1
     job = store.job("job-test")
     assert job["status"] == "done" and job["meta"]["sandboxes"] == 2
+
+
+def test_chart_verdict_parsing_survives_truncation_and_prose():
+    from app.agent import _parse_verdict
+    assert _parse_verdict('{"verdict": "pass", "note": "clear chart')["verdict"] == "pass"
+    assert _parse_verdict('Here: {"verdict":"warn","note":"empty axes"}') == {"verdict": "warn", "note": "empty axes"}
+    assert _parse_verdict("no json at all")["verdict"] == "warn"
