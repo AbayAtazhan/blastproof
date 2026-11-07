@@ -146,7 +146,7 @@ Tests (sandbox tests use real containers and are skipped without Docker):
 VULTR_API_KEY=... REPO_URL=https://github.com/<you>/blastproof bash deploy/provision.sh
 ```
 
-It creates a `vc2-2c-4gb` Ubuntu 24.04 instance whose cloud-init clones the repo and runs `deploy/setup.sh`.
+It creates a `vc2-1c-2gb` Ubuntu 24.04 instance (about $10/month, billed hourly) whose cloud-init clones the repo and runs `deploy/setup.sh`.
 Then add the inference key over SSH (it is deliberately not put in user-data).
 
 **Option B: on any fresh Ubuntu 24.04 VM**

@@ -110,6 +110,21 @@ def _client_ip(request: Request) -> str:
     return request.client.host if request.client else "unknown"
 
 
+_daily: deque = deque()
+
+
+def _budget_guard() -> None:
+    """Global cap on model-backed runs per 24h, so a public demo URL can't drain the inference budget."""
+    if settings.daily_job_limit <= 0:
+        return
+    now = time.monotonic()
+    while _daily and now - _daily[0] > 86400:
+        _daily.popleft()
+    if len(_daily) >= settings.daily_job_limit:
+        raise HTTPException(429, "The demo has reached today's usage limit. Please try again tomorrow.")
+    _daily.append(now)
+
+
 def _rate_limit(request: Request) -> None:
     now, ip = time.monotonic(), _client_ip(request)
     window = _hits[ip]
@@ -223,7 +238,7 @@ async def upload_dataset(request: Request, file: UploadFile = File(...)):
         store.delete_dataset(ds_id)
         shutil.rmtree(folder, ignore_errors=True)
         raise HTTPException(422, str(exc))
-    suggestions = await analyst.suggest(ds, profile) if llm.configured else []
+    suggestions = await analyst.suggest(ds, profile) if llm.configured and len(_daily) < settings.daily_job_limit else []
     store.set_profile(ds_id, profile, suggestions)
     return _public_ds(store.dataset(ds_id))
 
@@ -242,6 +257,7 @@ async def create_job(body: AskBody, request: Request):
     if not llm.configured:
         raise HTTPException(503, "Inference is not configured: set VULTR_INFERENCE_API_KEY")
     _rate_limit(request)
+    _budget_guard()
     job_id = uuid.uuid4().hex[:16]
     store.create_job(id=job_id, kind="analysis", dataset_id=ds["id"], question=body.question.strip())
     _spawn(analyst.run(job_id, ds, body.question.strip()))

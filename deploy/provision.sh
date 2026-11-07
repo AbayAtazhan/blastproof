@@ -3,14 +3,14 @@
 #
 #   VULTR_API_KEY=... REPO_URL=https://github.com/<you>/blastproof bash deploy/provision.sh
 #
-# Optional: REGION (default sea), PLAN (default vc2-2c-4gb), SSH_KEY_ID (from `GET /v2/ssh-keys`).
+# Optional: REGION (default sea), PLAN (default vc2-1c-2gb), SSH_KEY_ID (from `GET /v2/ssh-keys`).
 # The inference key is deliberately NOT sent in user-data (user-data is readable from the
 # instance metadata service). Add it afterwards over SSH; the script prints the command.
 set -euo pipefail
 : "${VULTR_API_KEY:?set VULTR_API_KEY (Vultr console -> Account -> API)}"
 : "${REPO_URL:?set REPO_URL to the public git URL of this repository}"
 REGION="${REGION:-sea}"
-PLAN="${PLAN:-vc2-2c-4gb}"
+PLAN="${PLAN:-vc2-1c-2gb}"
 API=https://api.vultr.com/v2
 export REGION PLAN SSH_KEY_ID="${SSH_KEY_ID:-}"
 auth=(-H "Authorization: Bearer ${VULTR_API_KEY}" -H "Content-Type: application/json")

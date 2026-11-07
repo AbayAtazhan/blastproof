@@ -71,6 +71,7 @@ class Settings:
     max_upload_mb: int
     rate_limit_jobs: int
     rate_limit_window_s: int
+    daily_job_limit: int
     trust_proxy: bool
 
     @property
@@ -102,6 +103,7 @@ def load_settings() -> Settings:
         max_upload_mb=_int("MAX_UPLOAD_MB", 20),
         rate_limit_jobs=_int("RATE_LIMIT_JOBS", 12),
         rate_limit_window_s=_int("RATE_LIMIT_WINDOW_S", 600),
+        daily_job_limit=_int("DAILY_JOB_LIMIT", 150),
         trust_proxy=_bool("TRUST_PROXY", False),
     )
 

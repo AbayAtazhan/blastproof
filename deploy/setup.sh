@@ -23,6 +23,12 @@ log "Base packages"
 apt-get update -y
 apt-get install -y ca-certificates curl gnupg git python3-venv python3-pip ufw
 
+if [ ! -f /swapfile ] && [ "$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)" -lt 3000 ]; then
+  log "2 GB swap file for the host (sandboxes keep swap disabled)"
+  fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile >/dev/null && swapon /swapfile
+  echo "/swapfile none swap sw 0 0" >> /etc/fstab
+fi
+
 log "Docker Engine"
 if ! command -v docker >/dev/null; then
   install -m 0755 -d /etc/apt/keyrings
@@ -81,6 +87,9 @@ setenv() {  # setenv KEY VALUE: replace or append
   if grep -q "^$1=" "$ENV_FILE"; then sed -i "s|^$1=.*|$1=$2|" "$ENV_FILE"; else echo "$1=$2" >> "$ENV_FILE"; fi
 }
 setenv SANDBOX_RUNTIME "$RUNTIME"
+# Small VMs (<= 2 GB RAM): fewer sandboxes at once so 512 MB-per-sandbox limits always fit.
+MEM_MB="$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)"
+if [ "$MEM_MB" -lt 3000 ]; then setenv MAX_CONCURRENT_SANDBOXES 2; else setenv MAX_CONCURRENT_SANDBOXES 4; fi
 setenv TRUST_PROXY 1
 setenv DATA_DIR "$DATA_DIR/data"
 KEY="${VULTR_INFERENCE_API_KEY:-}"
