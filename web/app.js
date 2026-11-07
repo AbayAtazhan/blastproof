@@ -179,7 +179,8 @@ function mountJob(question) {
           d.guard?.length ? h("div", { class: "findings" }, d.guard.map((f) =>
             h("div", { class: "finding" }, chip(f.severity, f.severity === "high" ? "bad" : f.severity === "medium" ? "warn" : ""),
               h("span", { text: `${f.message}${f.line ? ` (line ${f.line})` : ""}` })))) : null,
-          h("pre", { class: "code", text: d.code }));
+          h("details", { class: "code-wrap" }, h("summary", { class: "block-h" }, h("span", { class: "chev", text: "▸" }),
+            h("span", { text: `View code · ${d.code.split("\n").length} lines of Python` })), h("pre", { class: "code", text: d.code })));
         timeline.append(block);
         break;
       }

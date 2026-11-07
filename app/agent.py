@@ -110,7 +110,7 @@ class Analyst:
                 await emit(job_id, "step", {"id": f"think-{attempt}",
                                             "title": "Planning and writing code" if attempt == 1
                                             else f"Repairing code (attempt {attempt})"})
-                reply = await self.llm.complete(messages, temperature=0.1 if attempt == 1 else 0.2, max_tokens=3000)
+                reply = await self.llm.complete(messages, temperature=0.1 if attempt == 1 else 0.2, max_tokens=6000)
                 tokens["prompt"] += reply.prompt_tokens
                 tokens["completion"] += reply.completion_tokens
                 new_plan, code = parse_reply(reply.text)
@@ -148,7 +148,7 @@ class Analyst:
                     final = result
                     break
                 problem = self._problem(result)
-                await emit(job_id, "retry", {"attempt": attempt, "reason": problem.splitlines()[0][:300]})
+                await emit(job_id, "retry", {"attempt": attempt, "reason": self._reason(result)})
                 messages.append({"role": "user", "content": prompts.FIX_PROMPT.format(
                     attempt=attempt, max_attempts=st.max_attempts, problem=problem)})
 
@@ -161,7 +161,7 @@ class Analyst:
                     {"role": "user", "content": prompts.EXPLAIN_TASK.format(
                         question=question, plan="\n".join(f"- {p}" for p in plan) or "-",
                         stdout=final.stdout[-12000:], artifacts=arts, notes=notes)},
-                ], temperature=0.2, max_tokens=1200)
+                ], temperature=0.2, max_tokens=2500)
                 tokens["prompt"] += explain.prompt_tokens
                 tokens["completion"] += explain.completion_tokens
                 answer = explain.text.strip()
@@ -170,7 +170,8 @@ class Analyst:
                 await self._verify_chart(job_id, question, final)
                 status = "done"
             else:
-                error = (last.error if last else "no code was produced") or "no output"
+                error = (last.error if last else
+                         "the model did not return a runnable Python block in any attempt") or "no output"
                 explain = await self.llm.complete([
                     {"role": "user", "content": prompts.FAILED_TASK.format(
                         question=question, error=error[-2500:], notes=notes)}], temperature=0.2, max_tokens=600)
@@ -207,6 +208,17 @@ class Analyst:
             name=dataset["name"], rows=profile.get("rows"), n_columns=profile.get("n_columns"),
             columns=_fmt_columns(profile)[:6000], head=head[:3000], injection=injection,
             history=history, question=question)
+
+    @staticmethod
+    def _reason(result: SandboxResult) -> str:
+        """One human-readable line for the UI: why this attempt is being repaired."""
+        if result.containment:
+            c = result.containment[0]
+            return f"sandbox blocked it ({c.layer}); the model is adapting"
+        if result.error:
+            lines = [ln.strip() for ln in result.error.strip().splitlines() if ln.strip()]
+            return (lines[-1] if lines else result.error)[:300]
+        return "the script printed nothing; asking for printed results"
 
     @staticmethod
     def _problem(result: SandboxResult) -> str:

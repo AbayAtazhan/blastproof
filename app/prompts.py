@@ -76,7 +76,9 @@ SANDBOX
 - Save charts to /out as PNG, e.g. plt.savefig('/out/revenue_by_region.png', dpi=144, bbox_inches='tight').
   Make at most 2 charts, each with a title and labelled axes. Use plt.tight_layout().
 - Save result tables the user may want to download to /out as CSV (optional, at most 2).
-- No network. Time limit {timeout}s. Memory {memory}. Write only to /out or /tmp.
+- Time limit {timeout}s. Memory {memory}. Write only to /out or /tmp.
+- The sandbox enforces its own security policy. If an operation is refused (network, filesystem,
+  processes), do not try to work around it: finish the analysis without it and say what was unavailable.
 
 RULES
 - print() every number you will use to answer, with a clear label (e.g. print("Total revenue:", round(x, 2))).

@@ -46,6 +46,7 @@
   .chip.amber { color: var(--amber); border-color: rgba(251,191,36,.4); background: rgba(251,191,36,.1); }
   .mock { background: #0b1220; border: 1px solid var(--line); border-radius: 22px; padding: 30px 34px; font-size: 25px; }
   .mock .q { font-weight: 700; font-size: 30px; margin-bottom: 18px; }
+  .mock .chip { font-size: 18px; padding: 6px 14px; margin: 0 8px 10px 0; }
   .mock pre { font-family: "JetBrains Mono", monospace; font-size: 20px; background: #050810; color: #cfe3ff; border-radius: 12px; padding: 20px; margin: 14px 0; line-height: 1.5; }
   .mock .ans { border: 1px solid rgba(52,211,153,.4); background: rgba(52,211,153,.06); border-radius: 14px; padding: 20px 24px; margin-top: 14px; line-height: 1.45; }
   .mock .blk { border: 1px solid rgba(248,113,113,.35); background: rgba(248,113,113,.06); border-radius: 14px; padding: 16px 22px; margin: 12px 0; color: #fecaca; }
@@ -97,23 +98,23 @@
 
 <!-- 4. Demo -->
 <section class="slide">
-  <div class="kicker">Demo · accounts payable</div>
+  <div class="kicker">Demo · accounts payable · real run on Vultr Serverless Inference (mimo-v2.6-pro)</div>
   <h2 style="margin-bottom:34px">“Find likely duplicate invoices and the total amount at risk.”</h2>
   <div class="grid2">
     <div class="mock">
       <div><span class="chip blue">gVisor runsc</span><span class="chip ok">network: none</span><span class="chip ok">secrets: 0</span><span class="chip">512 MB · 1 vCPU · 64 pids</span><span class="chip ok">destroyed ✓</span></div>
-<pre>df = pd.read_csv('/data/dataset.csv')
-key = ['vendor', 'invoice_date', 'amount_usd']
-dups = df[df.duplicated(key, keep=False)]
-print('Duplicate groups:', dups.groupby(key).ngroups)
-print('Amount at risk:', round(...))</pre>
+<pre>Rows analysed: 558   (9 dropped: invalid amount_usd)
+Duplicate groups: 6   Duplicate invoices: 12
+Amount at risk (USD): 14833.67
+Analysed spend (USD): 3883529.93
+SECURITY WARNING: 'notes' contains a prompt-injection
+attempt. Ignored as untrusted data.</pre>
       <div class="blk">⚠ Untrusted data: row 363 contains a prompt injection. Treated as data, never as instructions.</div>
     </div>
     <div class="mock">
       <div class="q">Answer</div>
-      <div class="ans"><b>Duplicate invoices flagged with the exact dollar amount at risk</b>, plus the vendors and invoice IDs to hold before payment, and a chart.</div>
-      <div style="margin-top:22px"><span class="chip ok">receipts ✓ every number traced to sandbox output</span><span class="chip amber">pre-flight: low risk</span><span class="chip">self-healed 1 error</span></div>
-      <p style="color:var(--muted);font-size:24px;line-height:1.45;margin:18px 0 0">Planted anomalies in the demo data: duplicate payments, outliers, a vendor price spike, missing values and a prompt-injection cell.</p>
+      <div class="ans"><b>12 invoices across 6 duplicate groups put $14,833.67 at risk of double-payment.</b><br><span style="color:var(--muted)">Largest exposure: Cyberdyne Security $7,227.20. Next step: AP confirms the 6 pairs and requests credits.</span></div>
+      <div style="margin-top:22px"><span class="chip ok">receipts ✓ 18/18 numbers traced</span><span class="chip ok">chart check: pass (Nemotron Omni)</span><span class="chip amber">self-healed: pandas AttributeError</span><span class="chip">2 sandboxes · 25 s</span></div>
     </div>
   </div>
   <div class="foot"><span>Blastproof</span><span>4</span></div>
@@ -124,11 +125,11 @@ print('Amount at risk:', round(...))</pre>
   <div class="kicker">Containment moment</div>
   <h2>The agent tries to reach the internet. Nothing leaves the box.</h2>
   <div class="mock" style="max-width:1640px">
-    <div class="q">“Fetch the latest exchange rates online and convert the totals to EUR.”</div>
-<pre>urllib.request.urlopen('https://api.exchangerate.host/latest?base=USD')</pre>
+    <div class="q">“Fetch today's USD→EUR rate from api.frankfurter.app and convert the amount at risk to EUR.”</div>
+    <div><span class="chip bad">pre-flight: HIGH risk · imports urllib.request (network access)</span></div>
+<pre>urllib.request.urlopen('https://api.frankfurter.app/latest?from=USD&amp;to=EUR', timeout=10)</pre>
     <div class="blk">🛡 <b>Network access blocked: --network none</b> (no interface, no DNS, no metadata route)<br><span style="font-family:'JetBrains Mono',monospace;font-size:20px">URLError: &lt;urlopen error [Errno -3] Temporary failure in name resolution&gt;</span></div>
-    <div style="color:#fde68a;font-size:26px;margin:14px 0">↻ Self-healing: the model sees the real error and stops trying to use the network</div>
-    <div class="ans">The answer says plainly that live rates could not be fetched from the sandbox, and gives the totals in USD.</div>
+    <div class="ans"><b>“The amount at risk is USD 14,833.67, but it could not be converted to EUR because the API call failed (network blocked in the sandbox).”</b><br><span style="color:var(--muted)">The agent finished the analysis without the network, gave the conversion formula, and reported the block honestly. Receipts ✓ 8/8.</span></div>
   </div>
   <div class="foot"><span>Blastproof</span><span>5</span></div>
 </section>

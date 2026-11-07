@@ -85,7 +85,7 @@ def load_settings() -> Settings:
     return Settings(
         inference_base_url=_str("INFERENCE_BASE_URL", "https://api.vultrinference.com/v1").rstrip("/"),
         inference_api_key=_str("VULTR_INFERENCE_API_KEY"),
-        agent_model=_str("AGENT_MODEL", "deepseek-v4.1-flash-1017"),
+        agent_model=_str("AGENT_MODEL", "mimo-v2.6-pro"),
         vision_model=_str("VISION_MODEL", ""),
         sandbox_image=_str("SANDBOX_IMAGE", "blastproof-sandbox:latest"),
         sandbox_runtime=_str("SANDBOX_RUNTIME", ""),

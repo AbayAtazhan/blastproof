@@ -77,9 +77,11 @@ class VultrInference:
                     if isinstance(text, list):  # some servers return content parts
                         text = "".join(p.get("text", "") for p in text if isinstance(p, dict))
                     text = _THINK.sub("", text).strip()
-                    if not text and msg.get("reasoning_content") and choice.get("finish_reason") == "length":
-                        last_err = "model spent its whole token budget reasoning"
-                        body["max_tokens"] = int(body["max_tokens"] * 1.6)
+                    if not text:
+                        # Reasoning models sometimes spend the whole budget thinking and
+                        # return no content. Give them more room and ask again.
+                        last_err = "model returned an empty answer (token budget spent on reasoning)"
+                        body["max_tokens"] = min(int(body["max_tokens"] * 1.8), 16000)
                         continue
                     usage = data.get("usage") or {}
                     return Completion(text=text, model=data.get("model", body["model"]),

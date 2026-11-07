@@ -46,8 +46,33 @@ can prove.
 | Service | How Blastproof uses it |
 |---|---|
 | **Vultr Cloud Compute** (VM, Ubuntu 24.04) | Hosts the control plane (FastAPI + agent loop + audit DB) behind Caddy/HTTPS, **and** the sandbox fleet: Docker containers, optionally under gVisor `runsc`. |
-| **Vultr Serverless Inference** (`https://api.vultrinference.com/v1`, OpenAI-compatible) | Every LLM call: planning + code generation, self-repair, answer writing, dataset question suggestions, and optional chart verification with a multimodal model. Default agent model `deepseek-v4.1-flash-1017`, configurable via `AGENT_MODEL` / `VISION_MODEL` (see the live list at `/v1/models`). |
+| **Vultr Serverless Inference** (`https://api.vultrinference.com/v1`, OpenAI-compatible) | Every LLM call: planning + code generation, self-repair, answer writing, dataset question suggestions, and optional chart verification with a multimodal model. Default agent model `mimo-v2.6-pro` (picked by benchmark, below), chart check with `nemotron-3-nano-omni-30b-a3b-reasoning`; both configurable via `AGENT_MODEL` / `VISION_MODEL`. |
 | **Vultr API** | `deploy/provision.sh` creates the VM (region, plan, Ubuntu 24.04, cloud-init) in one command. |
+
+## Model selection (measured, not guessed)
+
+`scripts/bench_models.py` runs the full agent loop (real sandbox, real demo data) on three business
+questions (duplicate invoices, MRR growth with a chart, SLA breaches) for each Vultr Inference model:
+
+| Model | Solved | Total time | Receipts (numbers traced to output) |
+|---|---|---|---|
+| **mimo-v2.6-pro** (default) | **3/3** | **33 s** | **100%** |
+| deepseek-v4.1-flash-1017 | 3/3 | 37 s | 97% |
+| qwen3.8-27b | 3/3 | 43 s | 93% |
+| glm-5.3 | 2/3 | 70 s | 100% |
+| minimax-m3.1-flash | 1/3 | 73 s | 100% |
+
+The failures were reasoning models spending their whole token budget "thinking" and returning no code;
+the client now detects empty answers and retries with a larger budget.
+
+## Verified behaviour (real runs on Vultr Inference)
+
+- **AP duplicates:** 12 invoices in 6 duplicate groups, **$14,833.67** at risk; the first script crashed
+  (pandas `AttributeError`), the agent repaired it from the real traceback; receipts 18/18; chart check: pass.
+- **Prompt injection in data:** the planted cell (row 363) is detected during sandboxed profiling; the model
+  printed a warning in its own code and ignored it.
+- **Containment moment:** asked to fetch a live FX rate, the agent wrote `urllib` code (pre-flight: **high
+  risk**), the sandbox blocked it (`--network none`, DNS failure), and the answer reported it honestly.
 
 ## Architecture
 
