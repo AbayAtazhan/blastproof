@@ -5,3 +5,4 @@ __pycache__/
 var/
 .pytest_cache/
 .DS_Store
+.claude/
