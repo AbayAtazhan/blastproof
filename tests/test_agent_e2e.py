@@ -108,3 +108,9 @@ def test_chart_verdict_parsing_survives_truncation_and_prose():
     assert _parse_verdict('{"verdict": "pass", "note": "clear chart')["verdict"] == "pass"
     assert _parse_verdict('Here: {"verdict":"warn","note":"empty axes"}') == {"verdict": "warn", "note": "empty axes"}
     assert _parse_verdict("no json at all")["verdict"] == "warn"
+
+
+def test_answer_drops_markdown_images():
+    from app.agent import _clean_answer
+    out = _clean_answer("**Top plan: Enterprise.**\n\n![Revenue chart](revenue.png)\n\n- point one")
+    assert "![" not in out and "revenue.png" not in out and out.startswith("**Top plan")

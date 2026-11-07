@@ -37,7 +37,7 @@ const fmtTime = (ts) => new Date(ts * 1000).toLocaleString([], { month: "short",
 function renderMarkdown(md) {
   const div = h("div", { class: "md" });
   if (window.marked && window.DOMPurify) {
-    div.innerHTML = DOMPurify.sanitize(marked.parse(md || ""), { USE_PROFILES: { html: true } });
+    div.innerHTML = DOMPurify.sanitize(marked.parse(md || ""), { USE_PROFILES: { html: true }, FORBID_TAGS: ["img"] });
   } else {
     div.textContent = md || "";
   }

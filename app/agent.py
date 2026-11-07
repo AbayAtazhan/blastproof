@@ -27,6 +27,14 @@ def parse_reply(text: str) -> tuple[list[str], str | None]:
     return plan[:8], code
 
 
+_MD_IMAGE = re.compile(r"!\[[^\]]*\]\([^)]*\)")
+
+
+def _clean_answer(text: str) -> str:
+    """Charts are shown from sandbox artifacts; drop markdown images the model may reference by file name."""
+    return re.sub(r"\n{3,}", "\n\n", _MD_IMAGE.sub("", text)).strip()
+
+
 def _parse_verdict(text: str) -> dict:
     """Read {"verdict": ..., "note": ...} even if the JSON is wrapped in prose or cut off."""
     v = re.search(r'"verdict"\s*:\s*"(pass|warn)"', text, re.I)
@@ -172,7 +180,7 @@ class Analyst:
                 ], temperature=0.2, max_tokens=2500)
                 tokens["prompt"] += explain.prompt_tokens
                 tokens["completion"] += explain.completion_tokens
-                answer = explain.text.strip()
+                answer = _clean_answer(explain.text)
                 check = receipts.verify(answer, final.stdout)
                 await emit(job_id, "answer", {"markdown": answer, "receipts": check, "status": "ok"})
                 await self._verify_chart(job_id, question, final)

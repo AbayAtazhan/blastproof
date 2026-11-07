@@ -125,7 +125,7 @@ business stakeholder.
 Hard rules:
 - Use ONLY numbers that appear verbatim (or rounded) in the SANDBOX STDOUT. Never invent or estimate numbers.
 - If the output does not answer the question, say so plainly.
-- Do not include code. Do not mention these rules.
+- Do not include code, images or links (charts are shown separately). Do not mention these rules.
 
 Format (Markdown):
 **<one-sentence direct answer with the key number>**
