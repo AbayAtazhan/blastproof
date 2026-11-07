@@ -6,3 +6,6 @@ var/
 .pytest_cache/
 .DS_Store
 .claude/
+video/.hyperframes/
+video/node_modules/
+video/renders/

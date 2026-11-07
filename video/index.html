@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #070b14;
+        --panel: #0d1424;
+        --line: #1f2b45;
+        --ink: #e6ebf5;
+        --muted: #8a97b1;
+        --accent: #34d399;
+        --red: #f87171;
+        --amber: #fbbf24;
+        --blue: #60a5fa;
+        --display: "Inter", system-ui, sans-serif;
+        --mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root {
+        position: relative; width: 1920px; height: 1080px; overflow: hidden;
+        font-family: var(--display); color: var(--ink);
+        background:
+          radial-gradient(1200px 700px at 78% -10%, rgba(52, 211, 153, 0.13), transparent 60%),
+          radial-gradient(900px 600px at 0% 110%, rgba(96, 165, 250, 0.08), transparent 60%),
+          var(--ground);
+      }
+      .clip { position: absolute; inset: 0; }
+      .scene { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .grid-bg {
+        position: absolute; inset: 0; opacity: 0.35;
+        background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+
+      /* captions */
+      .cap { font-weight: 800; font-size: 92px; line-height: 1.04; letter-spacing: -0.035em; text-align: center; }
+      .cap.md { font-size: 68px; }
+      .cap.sm { font-size: 52px; font-weight: 700; }
+      .cap .w { display: inline-block; white-space: pre; }
+      .green { color: var(--accent); }
+      .red { color: var(--red); }
+      .amber { color: var(--amber); }
+      .blue { color: var(--blue); }
+      .muted { color: var(--muted); }
+      .mono { font-family: var(--mono); }
+      .kicker { font-family: var(--mono); font-size: 30px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+      .pill-cap {
+        position: absolute; left: 50%; transform: translateX(-50%);
+        background: rgba(7, 11, 20, 0.88); border: 1px solid var(--line); border-radius: 22px;
+        padding: 22px 40px 28px; white-space: nowrap; line-height: 1.2; box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+      }
+
+      /* screenshot frames */
+      .frame {
+        position: absolute; border-radius: 22px; overflow: hidden; background: var(--panel);
+        border: 1px solid #26344f; box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.02);
+      }
+      .frame img { display: block; width: 100%; height: auto; }
+      .hl {
+        position: absolute; border-radius: 14px; border: 4px solid var(--accent);
+        box-shadow: 0 0 0 9999px rgba(7, 11, 20, 0.55), 0 0 40px rgba(52, 211, 153, 0.6);
+      }
+      .hl.red { border-color: var(--red); box-shadow: 0 0 0 9999px rgba(7, 11, 20, 0.55), 0 0 50px rgba(248, 113, 113, 0.75); }
+      .hl.amber { border-color: var(--amber); box-shadow: 0 0 0 9999px rgba(7, 11, 20, 0.5), 0 0 50px rgba(251, 191, 36, 0.6); }
+
+      /* shield logo */
+      .shield { width: 150px; height: 150px; color: var(--accent); filter: drop-shadow(0 0 30px rgba(52,211,153,0.5)); }
+      .brand { font-weight: 900; font-size: 150px; letter-spacing: -0.05em; }
+
+      /* problem cards */
+      .cards { display: flex; gap: 40px; }
+      .card {
+        width: 520px; height: 300px; border-radius: 26px; background: var(--panel);
+        border: 1px solid rgba(248, 113, 113, 0.35); padding: 44px 40px; display: flex; flex-direction: column; gap: 22px;
+      }
+      .card .ico { width: 64px; height: 64px; border-radius: 16px; background: rgba(248,113,113,0.14); color: var(--red);
+        display: grid; place-items: center; font-size: 36px; font-weight: 900; }
+      .card p { font-size: 44px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; }
+
+      /* pipeline */
+      .pipe { display: flex; align-items: center; gap: 12px; }
+      .step {
+        width: 252px; height: 236px; border-radius: 22px; background: var(--panel); border: 2px solid var(--line);
+        padding: 26px 22px; display: flex; flex-direction: column; gap: 12px;
+      }
+      .step .n { font-family: var(--mono); font-size: 28px; color: var(--muted); font-weight: 700; }
+      .step b { font-size: 36px; letter-spacing: -0.02em; line-height: 1.05; }
+      .step span { font-size: 28px; color: var(--muted); line-height: 1.3; }
+      .step.sbx { border-style: dashed; }
+      .arrow { color: #6b7a98; font-size: 40px; font-weight: 800; }
+
+      /* checklist */
+      .checks { display: flex; flex-direction: column; gap: 22px; }
+      .check { display: flex; align-items: center; gap: 22px; font-size: 40px; font-weight: 700; letter-spacing: -0.015em; }
+      .check .tick { width: 54px; height: 54px; border-radius: 50%; background: rgba(52,211,153,0.16); color: var(--accent);
+        display: grid; place-items: center; font-size: 32px; font-weight: 900; flex: none; border: 2px solid rgba(52,211,153,0.5); }
+
+      /* stat tiles */
+      .tiles { position: absolute; display: flex; gap: 28px; }
+      .tile { width: 330px; padding: 28px 32px; border-radius: 22px; background: rgba(13, 20, 36, 0.96); border: 1px solid var(--line);
+        box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+      .tile .v { font-family: var(--mono); font-size: 84px; font-weight: 700; line-height: 1; }
+      .tile .l { font-size: 30px; color: var(--muted); margin-top: 12px; font-weight: 600; }
+
+      .flash { position: absolute; inset: 0; background: var(--red); opacity: 0; mix-blend-mode: screen; }
+      .bignum { font-family: var(--mono); font-weight: 700; font-size: 116px; letter-spacing: -0.04em; color: var(--accent);
+        text-shadow: 0 0 60px rgba(52,211,153,0.45); }
+      .chip { display: inline-block; font-family: var(--mono); font-size: 30px; padding: 12px 26px; border-radius: 999px; border: 2px solid; font-weight: 700; }
+      .chip.ok { color: var(--accent); border-color: rgba(52,211,153,0.5); background: rgba(52,211,153,0.1); }
+      .url { font-family: var(--mono); font-size: 44px; font-weight: 700; }
+      .progress { position: absolute; left: 0; bottom: 0; height: 6px; width: 1920px; background: var(--accent); transform-origin: 0 50%; opacity: 0.85; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="90" data-width="1920" data-height="1080">
+      <div class="grid-bg"></div>
+
+      <!-- 1. Hook -->
+      <section id="s1" class="clip scene" data-start="0" data-duration="7" data-track-index="0">
+        <div class="cap" id="s1a">AI analysts write and run code.</div>
+        <div class="cap" id="s1b" style="margin-top:28px">On <span class="green">YOUR</span> servers.</div>
+        <div class="cap" id="s1c" style="margin-top:28px">Next to <span class="green">YOUR</span> <span id="secrets" class="w">secrets.</span></div>
+      </section>
+
+      <!-- 2. Problem -->
+      <section id="s2" class="clip scene" data-start="7" data-duration="7.5" data-track-index="0">
+        <div class="kicker" id="s2k" style="color:var(--red);margin-bottom:46px">The problem</div>
+        <div class="cards">
+          <div class="card" id="c1"><div class="ico">&lt;/&gt;</div><p>One bad line of code can leak <span class="red">everything.</span></p></div>
+          <div class="card" id="c2"><div class="ico">⌁</div><p>One spreadsheet cell can <span class="red">hijack</span> the AI.</p></div>
+          <div class="card" id="c3"><div class="ico">#</div><p>And LLMs <span class="red">invent</span> numbers.</p></div>
+        </div>
+      </section>
+
+      <!-- 3. Reveal -->
+      <section id="s3" class="clip scene" data-start="14.5" data-duration="6.5" data-track-index="0">
+        <div style="display:flex;align-items:center;gap:40px">
+          <svg class="shield" id="shield" viewBox="0 0 32 32"><path d="M16 2 4 7v8c0 7.2 5.1 13.4 12 15 6.9-1.6 12-7.8 12-15V7L16 2Z" fill="none" stroke="currentColor" stroke-width="2"/><path id="tickp" d="m10.5 16 4 4 7-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="brand" id="brand">Blastproof</div>
+        </div>
+        <div class="cap md" id="s3t" style="margin-top:40px">The AI analyst with a <span class="green">blast radius of zero.</span></div>
+        <div class="kicker" id="s3k" style="margin-top:44px;color:var(--blue)">Built on Vultr Cloud Compute + Vultr Serverless Inference</div>
+      </section>
+
+      <!-- 4. Pipeline -->
+      <section id="s4" class="clip scene" data-start="21" data-duration="10" data-track-index="0">
+        <div class="kicker" id="s4k" style="margin-bottom:56px">How it works</div>
+        <div class="pipe">
+          <div class="step" id="p1"><div class="n">01</div><b>Profile</b><span>file parsed inside a sandbox</span></div><div class="arrow a1">→</div>
+          <div class="step" id="p2"><div class="n">02</div><b>Plan + code</b><span>Vultr Serverless Inference</span></div><div class="arrow a2">→</div>
+          <div class="step" id="p3"><div class="n">03</div><b>Pre-flight</b><span>risky code flagged first</span></div><div class="arrow a3">→</div>
+          <div class="step sbx" id="p4"><div class="n">04</div><b>Sandbox</b><span>fresh container · gVisor</span></div><div class="arrow a4">→</div>
+          <div class="step" id="p5"><div class="n">05</div><b>Self-heal</b><span>real errors → fixed code</span></div><div class="arrow a5">→</div>
+          <div class="step" id="p6"><div class="n">06</div><b>Receipts</b><span>every number verified</span></div>
+        </div>
+        <div class="cap md" id="s4t" style="margin-top:70px">Real code. Real data. <span class="green">Zero blast radius.</span></div>
+      </section>
+
+      <!-- 5. Prompt injection -->
+      <section id="s5" class="clip" data-start="31" data-duration="8" data-track-index="0">
+        <div class="frame" id="fA" style="left:110px;top:330px;width:1700px">
+          <img src="assets/02_injection_callout.png" alt="dataset header with prompt-injection warning" />
+          <div class="hl amber" id="hlA" style="left:34px;top:222px;width:1632px;height:148px"></div>
+        </div>
+        <div class="pill-cap cap md" id="s5a" style="top:120px">Row 363 tries to <span class="red">hijack</span> the agent.</div>
+        <div class="pill-cap cap sm" id="s5b" style="top:800px">Detected inside the sandbox. <span class="green">Treated as data, never as instructions.</span></div>
+      </section>
+
+      <!-- 6a. Live run -->
+      <section id="s6a" class="clip" data-start="39" data-duration="6.5" data-track-index="0">
+        <div class="frame" id="fB" style="left:160px;top:90px;width:1600px">
+          <img src="assets/08_live_running.png" alt="Blastproof UI while the agent runs" />
+          <div class="hl" id="hlB" style="left:300px;top:678px;width:960px;height:48px"></div>
+        </div>
+        <div class="pill-cap cap md" id="s6a1" style="top:60px">Every run = a <span class="green">brand-new container</span></div>
+        <div class="pill-cap cap sm" id="s6a2" style="top:900px"><span class="mono">network: none · secrets: 0 · 512 MB · 64 pids · gVisor</span></div>
+      </section>
+
+      <!-- 6b. Answer + counter -->
+      <section id="s6b" class="clip" data-start="45.5" data-duration="4.5" data-track-index="0">
+        <div class="frame" id="fC" style="left:930px;top:210px;width:900px">
+          <img src="assets/03_answer_receipts.png" alt="answer with receipts" />
+        </div>
+        <div style="position:absolute;left:110px;top:300px;width:700px">
+          <div class="kicker" id="s6bk">Duplicate invoices found</div>
+          <div class="bignum" id="counter" style="margin-top:18px">$0.00</div>
+          <div class="cap sm" id="s6bt" style="text-align:left;margin-top:20px">at risk of double payment</div>
+        </div>
+      </section>
+
+      <!-- 6c. Chart + receipts -->
+      <section id="s6c" class="clip scene" data-start="50" data-duration="3.1" data-track-index="0">
+        <div class="frame" id="fD" style="position:relative;width:1150px">
+          <img src="assets/04_chart_duplicates.png" alt="chart of duplicate amount at risk by vendor" />
+        </div>
+        <div style="margin-top:40px" id="s6cr"><span class="chip ok">receipts ✓ 20/20 numbers verified</span></div>
+      </section>
+
+      <!-- 7a. Setup -->
+      <section id="s7a" class="clip scene" data-start="53.1" data-duration="3.5" data-track-index="0">
+        <div class="cap" id="s7at">Now we ask it to fetch data<br />from the <span class="amber">internet…</span></div>
+      </section>
+
+      <!-- 7b. Pre-flight high -->
+      <section id="s7b" class="clip" data-start="56.6" data-duration="3.6" data-track-index="0">
+        <div class="frame" id="fE" style="left:160px;top:250px;width:1600px">
+          <img src="assets/05_preflight_high.png" alt="pre-flight review flags high risk" />
+          <div class="hl red" id="hlE1" style="left:968px;top:12px;width:300px;height:46px"></div>
+          <div class="hl red" id="hlE2" style="left:14px;top:350px;width:590px;height:46px"></div>
+        </div>
+        <div class="pill-cap cap md" id="s7bt" style="top:90px">Pre-flight: <span class="red">HIGH risk</span> · network code</div>
+      </section>
+
+      <!-- 7c. Blocked -->
+      <section id="s7c" class="clip" data-start="60.2" data-duration="4.3" data-track-index="0">
+        <div class="frame" id="fF" style="left:160px;top:420px;width:1600px">
+          <img src="assets/06_network_blocked.png" alt="sandbox blocked the network" />
+          <div class="hl red" id="hlF" style="left:6px;top:72px;width:1588px;height:112px"></div>
+        </div>
+        <div class="cap" id="blocked" style="position:absolute;left:0;right:0;top:120px;font-size:190px;font-weight:900;color:var(--red);letter-spacing:-0.05em">BLOCKED.</div>
+        <div class="cap md" id="s7ct" style="position:absolute;left:0;right:0;top:850px">Nothing leaves the box.</div>
+        <div class="flash" id="flash"></div>
+      </section>
+
+      <!-- 7d. Honest answer -->
+      <section id="s7d" class="clip" data-start="64.5" data-duration="4.5" data-track-index="0">
+        <div class="frame" id="fG" style="left:260px;top:250px;width:1400px">
+          <img src="assets/07_honest_answer.png" alt="agent explains the block honestly" />
+        </div>
+        <div class="pill-cap cap md" id="s7dt" style="top:80px">The agent adapts and <span class="green">tells the truth.</span></div>
+      </section>
+
+      <!-- 8. Defense in depth -->
+      <section id="s8" class="clip" data-start="69" data-duration="9" data-track-index="0">
+        <div style="position:absolute;left:120px;top:200px">
+          <div class="kicker" id="s8k" style="margin-bottom:40px">Defense in depth · every single run</div>
+          <div class="checks">
+            <div class="check" id="k1"><div class="tick">✓</div>No network · no DNS · no cloud metadata</div>
+            <div class="check" id="k2"><div class="tick">✓</div>0 secrets inside the sandbox</div>
+            <div class="check" id="k3"><div class="tick">✓</div>Read-only filesystem and data</div>
+            <div class="check" id="k4"><div class="tick">✓</div><span class="mono" style="font-size:38px">512 MB · 1 vCPU · 64 pids · time limit</span></div>
+            <div class="check" id="k5"><div class="tick">✓</div>All capabilities dropped + seccomp</div>
+            <div class="check" id="k6"><div class="tick">✓</div>gVisor kernel:&nbsp;<span class="mono green" style="font-size:38px">4.19.0-gvisor</span>&nbsp;<span class="muted" style="font-size:34px">(host 6.8)</span></div>
+            <div class="check" id="k7"><div class="tick">✓</div>Destroyed after every run</div>
+          </div>
+        </div>
+        <div class="frame" id="fI" style="left:1130px;top:330px;width:700px;background:#0b1220">
+          <img src="assets/architecture.png" alt="architecture on Vultr" />
+        </div>
+      </section>
+
+      <!-- 9. Proof: audit log -->
+      <section id="s9" class="clip" data-start="78" data-duration="6.5" data-track-index="0">
+        <div class="frame" id="fH" style="left:160px;top:60px;width:1600px">
+          <img src="assets/12_audit_log.png" alt="sandbox audit log" />
+        </div>
+        <div class="tiles" style="left:205px;top:770px">
+          <div class="tile" id="t1"><div class="v green">0</div><div class="l">secrets exposed</div></div>
+          <div class="tile" id="t2"><div class="v green">0</div><div class="l">sandboxes left alive</div></div>
+          <div class="tile" id="t3"><div class="v red">1</div><div class="l">network attempt blocked</div></div>
+          <div class="tile" id="t4"><div class="v blue">100%</div><div class="l">runs audited</div></div>
+        </div>
+        <div class="pill-cap cap md" id="s9t" style="top:40px">Every sandbox. <span class="green">Audited.</span></div>
+      </section>
+
+      <!-- 10. Outro -->
+      <section id="s10" class="clip scene" data-start="84.5" data-duration="5.5" data-track-index="0">
+        <div style="display:flex;align-items:center;gap:36px" id="s10logo">
+          <svg class="shield" viewBox="0 0 32 32"><path d="M16 2 4 7v8c0 7.2 5.1 13.4 12 15 6.9-1.6 12-7.8 12-15V7L16 2Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10.5 16 4 4 7-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="brand">Blastproof</div>
+        </div>
+        <div class="url" id="u1" style="margin-top:56px"><span class="muted">live demo</span>&nbsp; <span class="green">45-32-228-194.sslip.io</span></div>
+        <div class="url" id="u2" style="margin-top:22px"><span class="muted">code</span>&nbsp; github.com/AbayAtazhan/blastproof</div>
+        <div class="kicker" id="u3" style="margin-top:60px;color:var(--muted)">Vultr Agent Rush · Challenge 1: Blast Radius Zero</div>
+      </section>
+
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <script>
+      // Split captions into word spans for pop-in animation (deterministic DOM work).
+      function splitWords(sel) {
+        document.querySelectorAll(sel).forEach((el) => {
+          const walk = (node) => {
+            [...node.childNodes].forEach((child) => {
+              if (child.nodeType === 3) {
+                const parts = child.textContent.split(/(\s+)/);
+                const frag = document.createDocumentFragment();
+                parts.forEach((p) => {
+                  if (!p) return;
+                  if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+                  const s = document.createElement("span");
+                  s.className = "w";
+                  s.textContent = p;
+                  frag.appendChild(s);
+                });
+                child.replaceWith(frag);
+              } else if (child.nodeType === 1 && !child.classList.contains("w") && child.tagName !== "BR") {
+                walk(child);
+              }
+            });
+          };
+          walk(el);
+        });
+      }
+      splitWords("#s1b, #s1c, #s3t, #s4t, #s5a, #s5b, #s6a1, #s7at, #s7bt, #s7ct, #s7dt, #s9t");
+
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at, stagger = 0.06) =>
+        tl.from(`${sel} .w`, { y: 46, opacity: 0, scale: 0.92, duration: 0.42, ease: "back.out(2)", stagger }, at);
+      const rise = (sel, at, d = 0.55) => tl.from(sel, { y: 50, opacity: 0, duration: d, ease: "power3.out" }, at);
+      const out = (sel, at, d = 0.35) => tl.to(sel, { opacity: 0, y: -20, duration: d, ease: "power2.in" }, at);
+
+      // progress bar across the whole film
+      tl.fromTo("#progress", { scaleX: 0 }, { scaleX: 1, duration: 90, ease: "none" }, 0);
+
+      // 1. Hook
+      tl.fromTo("#s1a", { scale: 1.12 }, { scale: 1, duration: 0.9, ease: "power3.out" }, 0);
+      pop("#s1b", 2.1);
+      pop("#s1c", 3.8);
+      tl.to("#secrets", { color: "#f87171", duration: 0.12 }, 5.0);
+      tl.to("#secrets", { keyframes: [{ x: -10 }, { x: 8 }, { x: -6 }, { x: 4 }, { x: 0 }], duration: 0.4 }, 5.05);
+      tl.to("#s1", { scale: 1.06, duration: 1.4, ease: "power1.in" }, 5.5);
+      out("#s1", 6.6, 0.35);
+
+      // 2. Problem
+      rise("#s2k", 7.15, 0.4);
+      tl.from("#c1", { y: 80, opacity: 0, rotation: -3, duration: 0.6, ease: "back.out(1.6)" }, 7.4);
+      tl.from("#c2", { y: 80, opacity: 0, rotation: 2, duration: 0.6, ease: "back.out(1.6)" }, 9.3);
+      tl.from("#c3", { y: 80, opacity: 0, rotation: -2, duration: 0.6, ease: "back.out(1.6)" }, 11.2);
+      tl.to("#c1, #c2, #c3", { borderColor: "rgba(248,113,113,0.9)", duration: 0.3 }, 12.6);
+      out("#s2", 14.1, 0.35);
+
+      // 3. Reveal
+      tl.from("#shield", { scale: 0.2, rotation: -40, opacity: 0, duration: 0.8, ease: "back.out(1.8)" }, 14.7);
+      tl.from("#brand", { x: -60, opacity: 0, duration: 0.7, ease: "power3.out" }, 15.2);
+      pop("#s3t", 16.2, 0.07);
+      rise("#s3k", 18.0, 0.5);
+      out("#s3", 20.6, 0.35);
+
+      // 4. Pipeline
+      rise("#s4k", 21.1, 0.4);
+      ["#p1", "#p2", "#p3", "#p4", "#p5", "#p6"].forEach((id, i) => {
+        const at = 21.5 + i * 1.05;
+        tl.from(id, { y: 60, opacity: 0, duration: 0.45, ease: "back.out(1.7)" }, at);
+        tl.to(id, { borderColor: "#34d399", backgroundColor: "rgba(52,211,153,0.10)", duration: 0.3 }, at + 0.35);
+        if (i < 5) tl.from(`.a${i + 1}`, { opacity: 0, x: -14, duration: 0.3 }, at + 0.5);
+      });
+      tl.to("#p4", { scale: 1.08, duration: 0.35, yoyo: true, repeat: 1, ease: "power2.out" }, 27.8);
+      pop("#s4t", 28.2, 0.07);
+      out("#s4", 30.6, 0.35);
+
+      // 5. Prompt injection
+      tl.from("#fA", { y: 120, opacity: 0, duration: 0.7, ease: "power3.out" }, 31.05);
+      pop("#s5a", 31.4);
+      tl.from("#hlA", { opacity: 0, scale: 1.08, duration: 0.45, ease: "power2.out" }, 33.0);
+      tl.to("#fA", { scale: 1.06, duration: 4.5, ease: "none" }, 33.0);
+      pop("#s5b", 34.6, 0.04);
+      out("#s5", 38.6, 0.35);
+
+      // 6a. Live run: zoom onto the sandbox chips
+      tl.from("#fB", { scale: 0.9, opacity: 0, duration: 0.6, ease: "power3.out" }, 39.05);
+      pop("#s6a1", 39.4);
+      tl.set("#fB", { transformOrigin: "780px 700px" }, 40.9);
+      tl.to("#fB", { scale: 1.75, y: -260, duration: 1.4, ease: "power3.inOut" }, 40.9);
+      tl.from("#hlB", { opacity: 0, duration: 0.4 }, 42.2);
+      rise("#s6a2", 42.4, 0.45);
+      out("#s6a", 45.1, 0.35);
+
+      // 6b. Answer + counter
+      tl.from("#fC", { x: 140, opacity: 0, duration: 0.6, ease: "power3.out" }, 45.55);
+      rise("#s6bk", 45.7, 0.4);
+      const counter = { v: 0 };
+      const counterEl = document.getElementById("counter");
+      tl.to(counter, {
+        v: 14833.67, duration: 1.8, ease: "power2.out",
+        onUpdate: () => {
+          counterEl.textContent = "$" + counter.v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        },
+      }, 45.9);
+      tl.from("#counter", { scale: 0.8, opacity: 0, duration: 0.4, ease: "back.out(2)" }, 45.9);
+      rise("#s6bt", 46.8, 0.4);
+      out("#s6b", 49.6, 0.35);
+
+      // 6c. Chart + receipts
+      tl.from("#fD", { y: 80, opacity: 0, duration: 0.6, ease: "power3.out" }, 50.05);
+      tl.from("#s6cr", { scale: 0.6, opacity: 0, duration: 0.5, ease: "back.out(2.2)" }, 50.45);
+      out("#s6c", 52.75, 0.3);
+
+      // 7a. Setup
+      pop("#s7at", 53.2, 0.07);
+      out("#s7a", 56.25, 0.3);
+
+      // 7b. Pre-flight high
+      tl.from("#fE", { y: 90, opacity: 0, duration: 0.5, ease: "power3.out" }, 56.65);
+      pop("#s7bt", 56.9);
+      tl.from("#hlE1", { opacity: 0, duration: 0.3 }, 57.7);
+      tl.to("#hlE1", { scale: 1.06, duration: 0.3, yoyo: true, repeat: 3 }, 57.9);
+      tl.from("#hlE2", { opacity: 0, duration: 0.3 }, 58.6);
+      out("#s7b", 59.85, 0.3);
+
+      // 7c. Blocked: red flash + shake
+      tl.from("#fF", { y: 60, opacity: 0, duration: 0.45, ease: "power3.out" }, 60.25);
+      tl.from("#hlF", { opacity: 0, duration: 0.25 }, 60.9);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.38, duration: 0.08, yoyo: true, repeat: 1 }, 61.0);
+      tl.from("#blocked", { scale: 2.4, opacity: 0, duration: 0.35, ease: "power4.out" }, 61.0);
+      tl.to("#fF", { keyframes: [{ x: -18 }, { x: 14 }, { x: -10 }, { x: 6 }, { x: 0 }], duration: 0.45 }, 61.05);
+      pop("#s7ct", 62.2, 0.08);
+      out("#s7c", 64.15, 0.3);
+
+      // 7d. Honest answer
+      tl.from("#fG", { y: 80, opacity: 0, duration: 0.55, ease: "power3.out" }, 64.55);
+      pop("#s7dt", 64.8);
+      tl.to("#fG", { y: -150, duration: 3.4, ease: "power1.inOut" }, 65.4);
+      out("#s7d", 68.65, 0.3);
+
+      // 8. Defense in depth
+      rise("#s8k", 69.15, 0.4);
+      ["#k1", "#k2", "#k3", "#k4", "#k5", "#k6", "#k7"].forEach((id, i) => {
+        tl.from(id, { x: -60, opacity: 0, duration: 0.4, ease: "power3.out" }, 69.5 + i * 0.95);
+        tl.from(`${id} .tick`, { scale: 0, duration: 0.35, ease: "back.out(3)" }, 69.65 + i * 0.95);
+      });
+      tl.from("#fI", { x: 120, opacity: 0, duration: 0.7, ease: "power3.out" }, 70.2);
+      tl.to("#fI", { scale: 1.05, duration: 6.5, ease: "none" }, 71.0);
+      out("#s8", 77.65, 0.3);
+
+      // 9. Audit log proof
+      tl.from("#fH", { scale: 0.92, opacity: 0, duration: 0.6, ease: "power3.out" }, 78.05);
+      pop("#s9t", 78.3);
+      ["#t1", "#t2", "#t3", "#t4"].forEach((id, i) => {
+        tl.from(id, { y: 90, opacity: 0, duration: 0.5, ease: "back.out(1.8)" }, 79.6 + i * 0.4);
+      });
+      out("#s9", 84.15, 0.3);
+
+      // 10. Outro
+      tl.from("#s10logo", { scale: 0.8, opacity: 0, duration: 0.7, ease: "back.out(1.7)" }, 84.6);
+      rise("#u1", 85.5, 0.5);
+      rise("#u2", 86.0, 0.5);
+      rise("#u3", 86.6, 0.5);
+      tl.to("#s10", { opacity: 0, duration: 0.6 }, 89.4);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
